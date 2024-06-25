@@ -6,15 +6,20 @@ export default function Portfolio() {
       <div className="fixed left-0 top-0 z-[101] flex h-full w-full justify-center overflow-auto pl-28 pr-28 pt-[100px]">
         <header className="sticky top-0 flex w-1/2 max-w-[500px] flex-col">
           <div>
-            <p className="text-start">Hi, my name is</p>
+            <p className="text-start text-green-500 opacity-70">
+              Hi, my name is
+            </p>
             <p className="font-noto-sans text-start text-[60px] font-[600] leading-none opacity-90">
-              Seva Leo
+              Seva Leo.
             </p>
-            <p className="mt-4 text-start text-[20px] font-[400] opacity-90">
+            {/* <p className="mt-4 text-start text-[20px] font-[400] opacity-90">
               Full-Stack Developer
-            </p>
+            </p> */}
             <p className="mt-4 w-[70%] text-start opacity-70">
-              I build responsive and fast full stack websites
+              I'm a full-stack software developer specializing on building{" "}
+              <span className="text-green-500">fast </span>
+              and <span className="text-green-500">responsive </span> websites
+              with React and NodesJS.
             </p>
           </div>
 
