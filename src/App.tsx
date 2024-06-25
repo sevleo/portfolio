@@ -1,6 +1,5 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home";
 import Portfolio from "./components/Portfolio";
 import ErrorPage from "./components/ErrorPage";
 import { useEffect, useState } from "react";
@@ -12,7 +11,7 @@ function App() {
       path: "/",
       element: (
         <>
-          <Home></Home>
+          <Portfolio></Portfolio>
         </>
       ),
       errorElement: (
@@ -40,7 +39,7 @@ function App() {
 
     const timer2 = setTimeout(() => {
       setLoadingState("");
-    }, 2200);
+    }, 2500);
 
     return () => {
       clearTimeout(timer1);
@@ -50,33 +49,37 @@ function App() {
 
   return (
     <>
-      <div
-        className={`loading flex h-full w-full items-center justify-center ${loadingState}`}
-      >
-        <div className="loading__mask bg-yellow-400"></div>
-        <div className="loader">
-          <Vortex
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="vortex-loading"
-            wrapperStyle={{}}
-            wrapperClass="vortex-wrapper"
-            colors={[
-              "#FFFFFF",
-              "#FFFFFF",
-              "#FFFFFF",
-              "#FFFFFF",
-              "#FFFFFF",
-              "#FFFFFF",
-            ]}
-          />
-        </div>
-      </div>
       <div className="relative flex h-full w-full items-center justify-center">
-        <div className="noise"></div>
         <RouterProvider router={router} />
       </div>
+      <div className="noise"></div>
+      {loadingState !== "" ? (
+        <div
+          className={`loading flex h-full w-full items-center justify-center ${loadingState}`}
+        >
+          <div className="loading__mask bg-[#141414]"></div>
+          <div className="loader">
+            <Vortex
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="vortex-loading"
+              wrapperStyle={{}}
+              wrapperClass="vortex-wrapper"
+              colors={[
+                "#FFFFFF",
+                "#FFFFFF",
+                "#FFFFFF",
+                "#FFFFFF",
+                "#FFFFFF",
+                "#FFFFFF",
+              ]}
+            />
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </>
   );
 }
