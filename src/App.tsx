@@ -49,10 +49,15 @@ function App() {
 
   return (
     <>
+      {/* Main router */}
       <div className="relative flex h-full w-full items-center justify-center">
         <RouterProvider router={router} />
       </div>
+
+      {/* Noise */}
       <div className="noise"></div>
+
+      {/* Loader effect */}
       {loadingState !== "" ? (
         <div
           className={`loading flex h-full w-full items-center justify-center ${loadingState}`}
