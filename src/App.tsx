@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Portfolio from "./components/Portfolio";
 import ErrorPage from "./components/ErrorPage";
 import { useEffect, useState } from "react";
-import { Triangle } from "react-loader-spinner";
+import { Vortex } from "react-loader-spinner";
 
 function App() {
   const router = createBrowserRouter([
@@ -55,14 +55,21 @@ function App() {
       >
         <div className="loading__mask bg-yellow-400"></div>
         <div className="loader">
-          <Triangle
+          <Vortex
             visible={true}
             height="80"
             width="80"
-            color="#4fa94d"
-            ariaLabel="triangle-loading"
+            ariaLabel="vortex-loading"
             wrapperStyle={{}}
-            wrapperClass=""
+            wrapperClass="vortex-wrapper"
+            colors={[
+              "#FFFFFF",
+              "#FFFFFF",
+              "#FFFFFF",
+              "#FFFFFF",
+              "#FFFFFF",
+              "#FFFFFF",
+            ]}
           />
         </div>
       </div>
