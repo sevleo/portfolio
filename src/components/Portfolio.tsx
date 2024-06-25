@@ -121,34 +121,73 @@ export default function Portfolio() {
                 Technologies
               </h2>
             </div>
-            <div>
-              <p>
-                testtest test test test test esttest test test test test esttest
-                test test test test esttest test test test test esttest test
-                test test test esttest test test test test esttest test test
-                test test esttest test test test test esttest test test test
-                test esttest test test test test esttest test test test test
-                esttest test test test test esttest test test test test esttest
-                test test test test esttest test test test test esttest test
-                test test test testtest test test test test esttest test test
-                test test esttest test test test test esttest test test test
-                test esttest test test test test esttest test test test test
-                esttest test test test test esttest test test test test esttest
-                test test test test esttest test test test test esttest test
-                test test test esttest test test test test esttest test test
-                test test esttest test test test test esttest test test test
-                test esttest test test test test testtest test test test test
-                esttest test test test test esttest test test test test esttest
-                test test test test esttest test test test test esttest test
-                test test test esttest test test test test esttest test test
-                test test esttest test test test test esttest test test test
-                test esttest test test test test esttest test test test test
-                esttest test test test test esttest test test test test esttest
-                test test test test esttest test test test test testtest test
-                test test test esttest test test test test esttest test test
-                test test esttest test test test test esttest test test test
-                test esttest test test test test esttest test test test test
-              </p>
+            <div className="flex flex-wrap justify-center gap-1">
+              <img
+                src="https://img.shields.io/badge/Javascript-20232A?style=for-the-badge&logo=javascript&logoColor=#F7DF1E"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=#3178C6"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=#5FA04E"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/tailwindcss-20232A?style=for-the-badge&logo=tailwindcss&logoColor=#06B6D4"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/mongodb-20232A?style=for-the-badge&logo=mongodb"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=HTML5"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=CSS3"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/git-20232A?style=for-the-badge&logo=git"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/npm-20232A?style=for-the-badge&logo=npm"
+                alt=""
+              />
+
+              <img
+                src="https://img.shields.io/badge/Adaptable.io-20232A?style=for-the-badge&logo=Adaptable.io"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=Netlify"
+                alt=""
+              />
+
+              <img
+                src="https://img.shields.io/badge/DND%20Kit-20232A?style=for-the-badge&logo=DNDKit"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/MongooseJs-20232A?style=for-the-badge&logo=MongooseJs"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/PassportJS-20232A?style=for-the-badge&logo=Passport"
+                alt=""
+              />
+              <img
+                src="https://img.shields.io/badge/datefns-20232A?style=for-the-badge&logo=datefns"
+                alt=""
+              />
             </div>
           </section>
 
