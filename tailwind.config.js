@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         "noto-sans": ['"Noto Sans"', "sans-serif"],
       },
+      transitionTimingFunction: {
+        custom: "cubic-bezier(0.65, 0.05, 0.36, 1)",
+      },
     },
   },
   plugins: [],

@@ -6,12 +6,14 @@ import { useEffect, useState } from "react";
 import { Vortex } from "react-loader-spinner";
 
 function App() {
+  const [loadingState, setLoadingState] = useState("loading-in");
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <>
-          <Portfolio></Portfolio>
+          <Portfolio loadingState={loadingState}></Portfolio>
         </>
       ),
       errorElement: (
@@ -24,13 +26,11 @@ function App() {
       path: "/software-engineer",
       element: (
         <>
-          <Portfolio></Portfolio>
+          <Portfolio loadingState={loadingState}></Portfolio>
         </>
       ),
     },
   ]);
-
-  const [loadingState, setLoadingState] = useState("loading-in");
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
@@ -38,8 +38,8 @@ function App() {
     }, 1500);
 
     const timer2 = setTimeout(() => {
-      setLoadingState("");
-    }, 2500);
+      setLoadingState("loading-complete");
+    }, 2000);
 
     return () => {
       clearTimeout(timer1);
@@ -58,7 +58,7 @@ function App() {
       <div className="noise"></div>
 
       {/* Loader effect */}
-      {loadingState !== "" ? (
+      {loadingState !== "loading-complete" ? (
         <div
           className={`loading flex h-full w-full items-center justify-center ${loadingState}`}
         >
@@ -80,6 +80,7 @@ function App() {
                 "#FFFFFF",
               ]}
             />
+            <p>loading...</p>
           </div>
         </div>
       ) : (

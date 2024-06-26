@@ -1,30 +1,98 @@
 import TableOfContents from "./TableOfContents";
+import { useEffect, useState, useRef } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-export default function Portfolio() {
+export default function Portfolio({ loadingState }) {
+  const nodeRef1 = useRef(null);
+  const nodeRef2 = useRef(null);
+  const nodeRef3 = useRef(null);
+  const nodeRef4 = useRef(null);
+  const nodeRef5 = useRef(null);
+  const nodeRef6 = useRef(null);
+
+  const one = (
+    <p className={`pb-2 text-start text-green-500`}>Hi, my name is</p>
+  );
+
+  const two = (
+    <p
+      className={`font-noto-sans text-start text-[60px] font-[600] leading-none`}
+    >
+      Seva <span className={``}>Leo</span>.
+    </p>
+  );
+
+  const three = (
+    <p className="mt-4 w-[70%] text-start">
+      I'm a full-stack software developer specializing on building{" "}
+      <span className="text-green-500">fast </span>
+      and <span className="text-green-500">responsive </span> websites with
+      React and NodesJS.
+    </p>
+  );
+
+  const items = [
+    [one, nodeRef1],
+    [two, nodeRef2],
+    [three, nodeRef3],
+  ];
+
+  const [introComplete, setIntroComplete] = useState(false);
+
+  const handleIntroEntered = () => {
+    // Check if all intro elements have completed entering
+    if (
+      items.every((item) =>
+        item[1].current?.classList.contains("intro-enter-done")
+      )
+    ) {
+      setTimeout(() => {
+        setIntroComplete(true);
+      }, 1000);
+    }
+  };
+
   return (
     <>
-      <div className="fixed left-0 top-0 z-[101] flex h-full w-full justify-center overflow-auto pl-28 pr-28 pt-[100px]">
+      <div
+        className={`fixed left-0 top-0 z-[101] flex h-full w-full justify-center overflow-auto pl-28 pr-28 pt-[100px]`}
+      >
         <header className="sticky top-0 flex w-1/2 max-w-[500px] flex-col">
-          <div>
-            <p className="text-start text-green-500 opacity-70">
-              Hi, my name is
-            </p>
-            <p className="font-noto-sans text-start text-[60px] font-[600] leading-none opacity-90">
-              Seva Leo.
-            </p>
-            {/* <p className="mt-4 text-start text-[20px] font-[400] opacity-90">
-              Full-Stack Developer
-            </p> */}
-            <p className="mt-4 w-[70%] text-start opacity-70">
-              I'm a full-stack software developer specializing on building{" "}
-              <span className="text-green-500">fast </span>
-              and <span className="text-green-500">responsive </span> websites
-              with React and NodesJS.
-            </p>
-          </div>
+          <TransitionGroup component={null}>
+            {loadingState === "loading-complete" &&
+              items.map((item, i) => {
+                const node = item[0];
+                return (
+                  <CSSTransition
+                    key={i}
+                    nodeRef={item[1]}
+                    classNames="intro"
+                    timeout={500}
+                    onEntered={handleIntroEntered}
+                  >
+                    <div
+                      className="intro"
+                      style={{ transitionDelay: `${i + 1}00ms` }}
+                      ref={item[1]}
+                    >
+                      {node}
+                    </div>
+                  </CSSTransition>
+                );
+              })}
+          </TransitionGroup>
 
-          <div className="mt-20">
-            <TableOfContents />
+          <div>
+            <CSSTransition
+              in={loadingState === "loading-complete" && introComplete}
+              timeout={500}
+              classNames="nav-items"
+              nodeRef={nodeRef4}
+            >
+              <div ref={nodeRef4} className="nav-items mt-20">
+                <TableOfContents />
+              </div>
+            </CSSTransition>
           </div>
           <div className="mb-20 mt-auto">
             <ul className="flex gap-5">

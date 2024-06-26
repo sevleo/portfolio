@@ -602,12 +602,12 @@ video {
   margin-top: 1rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mt-\[100px\] {
   margin-top: 100px;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .flex {
@@ -616,10 +616,6 @@ video {
 
 .contents {
   display: contents;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-0 {
@@ -682,16 +678,16 @@ video {
   justify-content: center;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .overflow-auto {
@@ -735,16 +731,8 @@ video {
   font-size: 16px;
 }
 
-.text-\[20px\] {
-  font-size: 20px;
-}
-
 .text-\[60px\] {
   font-size: 60px;
-}
-
-.font-\[400\] {
-  font-weight: 400;
 }
 
 .font-\[600\] {
@@ -755,44 +743,9 @@ video {
   line-height: 1;
 }
 
-.text-green-800 {
-  --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity));
-}
-
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.text-green-600 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.text-blue-400 {
-  --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
-}
-
-.text-blue-300 {
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
-}
-
-.text-blue-800 {
-  --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity));
-}
-
-.text-blue-700 {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -803,12 +756,12 @@ video {
   opacity: 0.7;
 }
 
-.opacity-90 {
-  opacity: 0.9;
+.delay-1000 {
+  transition-delay: 1000ms;
 }
 
-.opacity-100 {
-  opacity: 1;
+.delay-500 {
+  transition-delay: 500ms;
 }
 
 :root {
@@ -822,6 +775,7 @@ video {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #root {
@@ -973,50 +927,47 @@ li:hover > div {
   opacity: 1;
 }
 
-/* Default react styles */
+/* Transition styles */
 
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* Fade up */
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.intro {
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    transform 300ms;
+  transform: translateY(20px);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.intro-enter-active {
+  opacity: 0.1;
+  transform: translateY(20px);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.intro-enter-done {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
-@media (prefers-color-scheme: light) {
+.nav-items {
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    transform 300ms;
+  transform: translateY(20px);
+}
+
+.nav-items-enter-active {
+  opacity: 0.1;
+  transform: translateY(20px);
+}
+
+.nav-items-enter-done {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -1027,7 +978,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+}  */
 
 .hover\:opacity-100:hover {
   opacity: 1;
