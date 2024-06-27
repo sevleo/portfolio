@@ -756,14 +756,6 @@ video {
   opacity: 0.7;
 }
 
-.delay-1000 {
-  transition-delay: 1000ms;
-}
-
-.delay-500 {
-  transition-delay: 500ms;
-}
-
 :root {
   font-family: noto-sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -936,15 +928,52 @@ li:hover > div {
   transition:
     opacity 500ms,
     transform 300ms;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 .intro-enter-active {
   opacity: 0.1;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 .intro-enter-done {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.about {
+  opacity: 0;
+  transition: opacity 1000ms;
+  transition:
+    opacity 500ms,
+    transform 300ms;
+  transform: translateX(200px);
+}
+
+.about-enter-active {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.about-enter-done {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.tech {
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    transform 300ms;
+  transform: translateY(40px);
+}
+
+.tech-enter-active {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.tech-enter-done {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -954,12 +983,12 @@ li:hover > div {
   transition:
     opacity 500ms,
     transform 300ms;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 .nav-items-enter-active {
   opacity: 0.1;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 
 .nav-items-enter-done {

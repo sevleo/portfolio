@@ -1,14 +1,25 @@
 import TableOfContents from "./TableOfContents";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { createRef } from "react";
 
 export default function Portfolio({ loadingState }) {
+  // Intro elements (items1)
   const nodeRef1 = useRef(null);
   const nodeRef2 = useRef(null);
   const nodeRef3 = useRef(null);
+
+  // Nav items
   const nodeRef4 = useRef(null);
+
+  // About elements (items2)
   const nodeRef5 = useRef(null);
   const nodeRef6 = useRef(null);
+  const nodeRef7 = useRef(null);
+  const nodeRef8 = useRef(null);
+
+  // Technologies elements
+  const refs = useRef([]);
 
   const one = (
     <p className={`pb-2 text-start text-green-500`}>Hi, my name is</p>
@@ -31,24 +42,272 @@ export default function Portfolio({ loadingState }) {
     </p>
   );
 
-  const items = [
+  // Intro elements
+  const items1 = [
     [one, nodeRef1],
     [two, nodeRef2],
     [three, nodeRef3],
   ];
+
+  const four = (
+    <p className="pb-2 text-start opacity-70">
+      I started my programming career in 2014 when, out of curiosity, I decided
+      to explore a Java tutorial. A year later, I found employment at a
+      consulting firm, working on Salesforce projects as a Salesforce Developer.
+    </p>
+  );
+
+  const five = (
+    <p className="pb-2 text-start opacity-70">
+      Each time I stayed on a project for a while, I mastered its intricacies. I
+      developed an intuitive sense for potential issues and naturally took
+      control of the system's overall dynamics. This progression led me to
+      become a Solution Architect. For the next four years, I thrived in this
+      new role.
+    </p>
+  );
+
+  const six = (
+    <p className="pb-2 text-start opacity-70">
+      As time went on, I found myself spending more time in the business realm
+      and less in the technical realm. This shift rekindled my passion for
+      programming. At the beginning of 2023, I decided to take a career break to
+      update my knowledge of modern technologies and frameworks, aiming to
+      return to my roots as a programmer.
+    </p>
+  );
+
+  const seven = (
+    <p className="pb-2 text-start opacity-70">
+      Now, I enjoy creating full-stack applications, finding satisfaction in
+      producing high-quality, reliable, and aesthetically pleasing code.
+    </p>
+  );
+
+  // About elements
+  const items2 = [
+    [four, nodeRef5],
+    [five, nodeRef6],
+    [six, nodeRef7],
+    [seven, nodeRef8],
+  ];
+
+  const tech1 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Javascript-20232A?style=for-the-badge&logo=javascript&logoColor=#F7DF1E"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech2 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=#3178C6"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech3 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech4 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=#5FA04E"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech5 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/tailwindcss-20232A?style=for-the-badge&logo=tailwindcss&logoColor=#06B6D4"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech6 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/mongodb-20232A?style=for-the-badge&logo=mongodb"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech7 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=HTML5"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech8 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=CSS3"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech9 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/git-20232A?style=for-the-badge&logo=git"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech10 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/npm-20232A?style=for-the-badge&logo=npm"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech11 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Adaptable.io-20232A?style=for-the-badge&logo=Adaptable.io"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech12 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=Netlify"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech13 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/DND%20Kit-20232A?style=for-the-badge&logo=DNDKit"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech14 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/MongooseJs-20232A?style=for-the-badge&logo=MongooseJs"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech15 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/PassportJS-20232A?style=for-the-badge&logo=Passport"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech16 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/datefns-20232A?style=for-the-badge&logo=datefns"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  // Tech elements
+  const items3 = useMemo(
+    () => [
+      tech1,
+      tech2,
+      tech3,
+      tech4,
+      tech5,
+      tech6,
+      tech7,
+      tech8,
+      tech9,
+      tech10,
+      tech11,
+      tech12,
+      tech13,
+      tech14,
+      tech15,
+      tech16,
+    ],
+    [
+      tech1,
+      tech2,
+      tech3,
+      tech4,
+      tech5,
+      tech6,
+      tech7,
+      tech8,
+      tech9,
+      tech10,
+      tech11,
+      tech12,
+      tech13,
+      tech14,
+      tech15,
+      tech16,
+    ]
+  );
+
+  useEffect(() => {
+    refs.current = items3.map((_, i) => refs.current[i] ?? createRef());
+  }, [items3]);
 
   const [introComplete, setIntroComplete] = useState(false);
 
   const handleIntroEntered = () => {
     // Check if all intro elements have completed entering
     if (
-      items.every((item) =>
+      items1.every((item) =>
         item[1].current?.classList.contains("intro-enter-done")
       )
     ) {
       setTimeout(() => {
         setIntroComplete(true);
-      }, 1000);
+      }, 0);
+    }
+  };
+
+  const [aboutComplete, setAboutComplete] = useState(false);
+
+  const handleAboutEntered = () => {
+    // Check if all about elements have completed entering
+    if (
+      items2.every((item) =>
+        item[1].current?.classList.contains("about-enter-done")
+      )
+    ) {
+      setTimeout(() => {
+        setAboutComplete(true);
+      }, 200);
     }
   };
 
@@ -60,7 +319,7 @@ export default function Portfolio({ loadingState }) {
         <header className="sticky top-0 flex w-1/2 max-w-[500px] flex-col">
           <TransitionGroup component={null}>
             {loadingState === "loading-complete" &&
-              items.map((item, i) => {
+              items1.map((item, i) => {
                 const node = item[0];
                 return (
                   <CSSTransition
@@ -72,7 +331,7 @@ export default function Portfolio({ loadingState }) {
                   >
                     <div
                       className="intro"
-                      style={{ transitionDelay: `${i + 1}00ms` }}
+                      style={{ transitionDelay: `${i + 0}00ms` }}
                       ref={item[1]}
                     >
                       {node}
@@ -84,7 +343,7 @@ export default function Portfolio({ loadingState }) {
 
           <div>
             <CSSTransition
-              in={loadingState === "loading-complete" && introComplete}
+              in={aboutComplete}
               timeout={500}
               classNames="nav-items"
               nodeRef={nodeRef4}
@@ -173,32 +432,27 @@ export default function Portfolio({ loadingState }) {
               </h2>
             </div>
             <div>
-              <p className="pb-2 text-start opacity-70">
-                I started my programming career in 2014 when, out of curiosity,
-                I decided to explore a Java tutorial. A year later, I found
-                employment at a consulting firm, working on Salesforce projects
-                as a Salesforce Developer.
-              </p>
-              <p className="pb-2 text-start opacity-70">
-                Each time I stayed on a project for a while, I mastered its
-                intricacies. I developed an intuitive sense for potential issues
-                and naturally took control of the system's overall dynamics.
-                This progression led me to become a Solution Architect. For the
-                next four years, I thrived in this new role.
-              </p>
-              <p className="pb-2 text-start opacity-70">
-                As time went on, I found myself spending more time in the
-                business realm and less in the technical realm. This shift
-                rekindled my passion for programming. At the beginning of 2023,
-                I decided to take a career break to update my knowledge of
-                modern technologies and frameworks, aiming to return to my roots
-                as a programmer.
-              </p>
-              <p className="pb-2 text-start opacity-70">
-                Now, I enjoy creating full-stack applications, finding
-                satisfaction in producing high-quality, reliable, and
-                aesthetically pleasing code.
-              </p>
+              {items2.map((item, i) => {
+                const node = item[0];
+                return (
+                  <CSSTransition
+                    in={introComplete}
+                    key={i}
+                    nodeRef={item[1]}
+                    classNames="about"
+                    timeout={500}
+                    onEntered={handleAboutEntered}
+                  >
+                    <div
+                      className="about"
+                      style={{ transitionDelay: `${i + 1}00ms` }}
+                      ref={item[1]}
+                    >
+                      {node}
+                    </div>
+                  </CSSTransition>
+                );
+              })}
             </div>
           </section>
           <section className="relative mt-[100px]">
@@ -211,72 +465,25 @@ export default function Portfolio({ loadingState }) {
               </h2>
             </div>
             <div className="flex flex-wrap justify-center gap-1">
-              <img
-                src="https://img.shields.io/badge/Javascript-20232A?style=for-the-badge&logo=javascript&logoColor=#F7DF1E"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=#3178C6"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=#5FA04E"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/tailwindcss-20232A?style=for-the-badge&logo=tailwindcss&logoColor=#06B6D4"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/mongodb-20232A?style=for-the-badge&logo=mongodb"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=HTML5"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=CSS3"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/git-20232A?style=for-the-badge&logo=git"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/npm-20232A?style=for-the-badge&logo=npm"
-                alt=""
-              />
-
-              <img
-                src="https://img.shields.io/badge/Adaptable.io-20232A?style=for-the-badge&logo=Adaptable.io"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/Netlify-20232A?style=for-the-badge&logo=Netlify"
-                alt=""
-              />
-
-              <img
-                src="https://img.shields.io/badge/DND%20Kit-20232A?style=for-the-badge&logo=DNDKit"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/MongooseJs-20232A?style=for-the-badge&logo=MongooseJs"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/PassportJS-20232A?style=for-the-badge&logo=Passport"
-                alt=""
-              />
-              <img
-                src="https://img.shields.io/badge/datefns-20232A?style=for-the-badge&logo=datefns"
-                alt=""
-              />
+              {items3.map((item, i) => {
+                return (
+                  <CSSTransition
+                    key={i}
+                    in={aboutComplete}
+                    nodeRef={refs.current[i]}
+                    classNames="tech"
+                    timeout={500}
+                  >
+                    <div
+                      ref={refs.current[i]}
+                      className="tech"
+                      style={{ transitionDelay: `${i * 50}ms` }}
+                    >
+                      {item}
+                    </div>
+                  </CSSTransition>
+                );
+              })}
             </div>
           </section>
 

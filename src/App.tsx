@@ -35,11 +35,11 @@ function App() {
   useEffect(() => {
     const timer1 = setTimeout(() => {
       setLoadingState("loading-out");
-    }, 1500);
+    }, 800);
 
     const timer2 = setTimeout(() => {
       setLoadingState("loading-complete");
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearTimeout(timer1);
