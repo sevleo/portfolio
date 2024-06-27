@@ -39,7 +39,7 @@ function App() {
 
     const timer2 = setTimeout(() => {
       setLoadingState("loading-complete");
-    }, 1500);
+    }, 1300);
 
     return () => {
       clearTimeout(timer1);

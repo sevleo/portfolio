@@ -634,6 +634,10 @@ video {
   height: 100%;
 }
 
+.max-h-\[800px\] {
+  max-height: 800px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -670,6 +674,10 @@ video {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -690,8 +698,12 @@ video {
   gap: 1.25rem;
 }
 
-.overflow-auto {
-  overflow: auto;
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .bg-\[\#141414\] {
@@ -735,12 +747,22 @@ video {
   font-size: 60px;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-\[600\] {
   font-weight: 600;
 }
 
 .leading-none {
   line-height: 1;
+}
+
+.text-\[\#b3b3b3\] {
+  --tw-text-opacity: 1;
+  color: rgb(179 179 179 / var(--tw-text-opacity));
 }
 
 .text-green-500 {
@@ -836,7 +858,7 @@ body {
   height: 600%;
   width: 600%;
   animation: grain 7s steps(10) infinite;
-  background-image: url(/src/assets/nnnoise6.svg);
+  background-image: url(/src/assets/nnnoise2.svg);
   background-size: 200px;
   background-repeat: repeat;
   opacity: 0.5;
@@ -926,7 +948,7 @@ li:hover > div {
 .intro {
   opacity: 0;
   transition:
-    opacity 500ms,
+    opacity 300ms,
     transform 300ms;
   transform: translateY(40px);
 }
@@ -978,6 +1000,45 @@ li:hover > div {
   transform: translateY(0px);
 }
 
+.connect {
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    transform 500ms;
+  transform: translateX(-200px);
+}
+
+.connect-enter-active {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.connect-enter-done {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.projects-section,
+.experience-section {
+  opacity: 0;
+  transition:
+    opacity 1000ms,
+    transform 500ms;
+  transform: translateY(100px);
+}
+
+.projects-section-enter-active,
+.experience-section-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.projects-section-enter-done,
+.experience-section-enter-done {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .nav-items {
   opacity: 0;
   transition:
@@ -1008,6 +1069,11 @@ li:hover > div {
     background-color: #f9f9f9;
   }
 }  */
+
+.hover\:text-\[\#ffffff\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
 .hover\:opacity-100:hover {
   opacity: 1;

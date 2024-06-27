@@ -84,7 +84,7 @@ body {
   width: 600%;
   -webkit-animation: grain 7s steps(10) infinite;
   animation: grain 7s steps(10) infinite;
-  background-image: url(/src/assets/nnnoise6.svg);
+  background-image: url(/src/assets/nnnoise2.svg);
   background-size: 200px;
   background-repeat: repeat;
   opacity: 0.5;
@@ -165,7 +165,7 @@ li:hover > div {
 .intro {
   opacity: 0;
   transition:
-    opacity 500ms,
+    opacity 300ms,
     transform 300ms;
   transform: translateY(40px);
 }
@@ -213,6 +213,45 @@ li:hover > div {
 }
 
 .tech-enter-done {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.connect {
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    transform 500ms;
+  transform: translateX(-200px);
+}
+
+.connect-enter-active {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.connect-enter-done {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.projects-section,
+.experience-section {
+  opacity: 0;
+  transition:
+    opacity 1000ms,
+    transform 500ms;
+  transform: translateY(100px);
+}
+
+.projects-section-enter-active,
+.experience-section-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.projects-section-enter-done,
+.experience-section-enter-done {
   opacity: 1;
   transform: translateY(0px);
 }
