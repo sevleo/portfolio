@@ -98,10 +98,10 @@ export default function Portfolio({ loadingState }) {
   const five = (
     <p className="pb-2 text-start opacity-80">
       Each time I stayed on a project for a while, I mastered its intricacies. I
-      developed an intuitive sense for potential issues and naturally took
-      control of the system's overall dynamics. This progression led me to
-      become a Solution Architect. For the next four years, I thrived in this
-      new role.
+      developed an intuitive sense for what's going on in the system and
+      naturally took control of the system's overall dynamics. This progression
+      led me to become a Solution Architect. For the next four years, I thrived
+      in this new role.
     </p>
   );
 
@@ -467,6 +467,7 @@ export default function Portfolio({ loadingState }) {
   };
 
   const [connectComplete, setConnectComplete] = useState(false);
+  const [showBorder, setShowBorder] = useState(false);
 
   const handleConnectEntered = () => {
     // Check if all about elements have completed entering
@@ -477,8 +478,11 @@ export default function Portfolio({ loadingState }) {
     ) {
       setTimeout(() => {
         setConnectComplete(true);
-        console.log("connect complete");
       }, 200);
+
+      setTimeout(() => {
+        setShowBorder(true);
+      }, 1000);
     }
   };
 
@@ -578,8 +582,9 @@ export default function Portfolio({ loadingState }) {
                 About
               </h2>
             </div>
-            <div className="section-content relative">
-              <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
+            <div
+              className={`section-content relative ${showBorder ? "show-border" : ""}`}
+            >
               {items2.map((item, i) => {
                 const node = item[0];
                 return (
@@ -616,8 +621,9 @@ export default function Portfolio({ loadingState }) {
                 Technologies
               </h2>
             </div>
-            <div className="section-content relative flex flex-wrap justify-start gap-1">
-              <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
+            <div
+              className={`section-content relative flex flex-wrap justify-start gap-1 ${showBorder ? "show-border" : ""}`}
+            >
               {items3.map((item, i) => {
                 return (
                   <CSSTransition
@@ -649,7 +655,7 @@ export default function Portfolio({ loadingState }) {
             <section
               id="projects"
               ref={nodeRefProjectsSection}
-              className="projects-section relative mt-[100px]"
+              className={`projects-section relative mt-[100px]`}
               style={{ transitionDelay: `${500}ms` }}
             >
               <div>
@@ -660,9 +666,9 @@ export default function Portfolio({ loadingState }) {
                   Projects
                 </h2>
               </div>
-              <ul className="section-content relative">
-                <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
-
+              <ul
+                className={`section-content relative ${showBorder ? "show-border" : ""}`}
+              >
                 <li>
                   <div className="group relative grid transition-all">
                     <div className="aspect-auto h-auto w-[200px]">
@@ -687,7 +693,7 @@ export default function Portfolio({ loadingState }) {
             <section
               id="experience"
               ref={nodeRefExperienceSection}
-              className="experience-section relative mt-[100px]"
+              className={`experience-section relative mt-[100px]`}
               style={{ transitionDelay: `${1000}ms` }}
             >
               <div>
@@ -698,9 +704,9 @@ export default function Portfolio({ loadingState }) {
                   Experience
                 </h2>
               </div>
-              <div className="section-content relative">
-                <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
-
+              <div
+                className={`section-content relative ${showBorder ? "show-border" : ""}`}
+              >
                 <p>
                   testtest test test test test esttest test test test test
                   esttest test test test test esttest test test test test

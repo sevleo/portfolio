@@ -662,10 +662,6 @@ video {
   width: 1.5rem;
 }
 
-.w-\[0\.5px\] {
-  width: 0.5px;
-}
-
 .w-\[200px\] {
   width: 200px;
 }
@@ -1098,16 +1094,19 @@ nav li:hover > div {
 /* Content styles on scroll */
 
 section > .section-content {
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-  /* box-shadow: 0px 0px 50px 30px rgba(149, 149, 149, 0.05); */
+  transition: all 0.4s ease-in-out;
   padding: 10px;
-  /* border-radius: 10px; */
-  /* -webkit-box-shadow: 0px 0px 42px 5px rgba(0, 0, 0, 0.75); */
-  /* -moz-box-shadow: 0px 0px 42px 5px rgba(0, 0, 0, 0.75); */
+  border-left: 0.5px solid transparent;
+}
+
+section > .section-content.show-border {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  border-left: 0.5px solid white;
 }
 
 section.fade > .section-content {
+  border-left: 0.5px solid transparent;
   opacity: 1;
   box-shadow: none;
 }
@@ -1116,10 +1115,12 @@ section > .section-content > .shadow-div {
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 1;
   transition: all 0.3s ease-in-out;
+  /* box-shadow: -3px 0px 8px 1px rgba(255, 255, 255, 0.4); */
 }
 
 section.fade > .section-content > .shadow-div {
   opacity: 0;
+  box-shadow: none;
 }
 
 /* @media (prefers-color-scheme: light) {
