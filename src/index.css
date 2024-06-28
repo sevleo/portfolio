@@ -133,27 +133,27 @@ a {
   opacity: 0.4;
 }
 
-li.active > a {
+nav li.active > a {
   opacity: 1;
 }
 
-li:hover > a {
+nav li:hover > a {
   opacity: 1;
 }
 
-li > div {
+nav li > div {
   width: 30px;
   background-color: white;
   opacity: 0.4;
   transition: all 0.1s ease-in-out;
 }
 
-li.active > div {
+nav li.active > div {
   width: 50px;
   opacity: 1;
 }
 
-li:hover > div {
+nav li:hover > div {
   width: 50px;
   opacity: 1;
 }
@@ -272,6 +272,33 @@ li:hover > div {
 .nav-items-enter-done {
   opacity: 1;
   transform: translateY(0px);
+}
+
+/* Content styles on scroll */
+
+section > .section-content {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0px 0px 50px 30px rgba(149, 149, 149, 0.05); */
+  padding: 10px;
+  /* border-radius: 10px; */
+  /* -webkit-box-shadow: 0px 0px 42px 5px rgba(0, 0, 0, 0.75); */
+  /* -moz-box-shadow: 0px 0px 42px 5px rgba(0, 0, 0, 0.75); */
+}
+
+section.fade > .section-content {
+  opacity: 1;
+  box-shadow: none;
+}
+
+section > .section-content > .shadow-div {
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+section.fade > .section-content > .shadow-div {
+  opacity: 0;
 }
 
 /* @media (prefers-color-scheme: light) {

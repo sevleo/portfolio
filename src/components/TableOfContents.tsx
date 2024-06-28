@@ -47,7 +47,7 @@ const useIntersectionObserver = (
     };
 
     const observer = new IntersectionObserver(callback, {
-      rootMargin: "0px 0px -80% 0px",
+      rootMargin: "0px 0px -60% 0px",
     });
 
     const headingElements = Array.from(document.querySelectorAll("h2, h3"));
@@ -140,9 +140,8 @@ const Headings = ({ headings, activeId }: any) => (
   </ul>
 );
 
-const TableOfContents = () => {
+const TableOfContents = ({ activeId, setActiveId }) => {
   const { nestedHeadings } = useHeadingsData();
-  const [activeId, setActiveId] = useState(undefined);
   useIntersectionObserver(setActiveId);
 
   return (

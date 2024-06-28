@@ -2,8 +2,44 @@ import TableOfContents from "./TableOfContents";
 import { useEffect, useState, useRef, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createRef } from "react";
+import yogato from "./yogato.png";
 
 export default function Portfolio({ loadingState }) {
+  const [activeId, setActiveId] = useState(undefined);
+
+  useEffect(() => {
+    if (activeId === nodeRefAboutSection.current.id) {
+      nodeRefAboutSection.current.classList.remove("fade");
+      nodeRefTechnologiesSection.current.classList.add("fade");
+      nodeRefProjectsSection.current.classList.add("fade");
+      nodeRefExperienceSection.current.classList.add("fade");
+    }
+    if (activeId === nodeRefTechnologiesSection.current.id) {
+      nodeRefAboutSection.current.classList.add("fade");
+      nodeRefTechnologiesSection.current.classList.remove("fade");
+      nodeRefProjectsSection.current.classList.add("fade");
+      nodeRefExperienceSection.current.classList.add("fade");
+    }
+    if (activeId === nodeRefProjectsSection.current.id) {
+      nodeRefAboutSection.current.classList.add("fade");
+      nodeRefTechnologiesSection.current.classList.add("fade");
+      nodeRefProjectsSection.current.classList.remove("fade");
+      nodeRefExperienceSection.current.classList.add("fade");
+    }
+    if (activeId === nodeRefExperienceSection.current.id) {
+      nodeRefAboutSection.current.classList.add("fade");
+      nodeRefTechnologiesSection.current.classList.add("fade");
+      nodeRefProjectsSection.current.classList.add("fade");
+      nodeRefExperienceSection.current.classList.remove("fade");
+    }
+  }, [activeId]);
+
+  // Section nodeRefs
+  const nodeRefAboutSection = useRef(null);
+  const nodeRefTechnologiesSection = useRef(null);
+  const nodeRefProjectsSection = useRef(null);
+  const nodeRefExperienceSection = useRef(null);
+
   // Intro nodeRefs (items1)
   const nodeRef1 = useRef(null);
   const nodeRef2 = useRef(null);
@@ -18,12 +54,6 @@ export default function Portfolio({ loadingState }) {
   const nodeRef7 = useRef(null);
   const nodeRef8 = useRef(null);
 
-  // Projects section nodeRef
-  const nodeRefProjectsSection = useRef(null);
-
-  // Experience section nodeRef
-  const nodeRefExperienceSection = useRef(null);
-
   // Email nodeRef
   const nodeRefEmail = useRef(null);
 
@@ -34,7 +64,7 @@ export default function Portfolio({ loadingState }) {
 
   const two = (
     <p
-      className={`font-noto-sans text-start text-[60px] font-[600] leading-none`}
+      className={`text-start font-noto-sans text-[60px] font-[600] leading-none`}
     >
       Seva <span className={``}>Leo</span>.
     </p>
@@ -58,7 +88,7 @@ export default function Portfolio({ loadingState }) {
 
   // About nodes
   const four = (
-    <p className="pb-2 text-start opacity-70">
+    <p className="pb-2 text-start opacity-80">
       I started my programming career in 2014 when, out of curiosity, I decided
       to explore a Java tutorial. A year later, I found employment at a
       consulting firm, working on Salesforce projects as a Salesforce Developer.
@@ -66,7 +96,7 @@ export default function Portfolio({ loadingState }) {
   );
 
   const five = (
-    <p className="pb-2 text-start opacity-70">
+    <p className="pb-2 text-start opacity-80">
       Each time I stayed on a project for a while, I mastered its intricacies. I
       developed an intuitive sense for potential issues and naturally took
       control of the system's overall dynamics. This progression led me to
@@ -76,7 +106,7 @@ export default function Portfolio({ loadingState }) {
   );
 
   const six = (
-    <p className="pb-2 text-start opacity-70">
+    <p className="pb-2 text-start opacity-80">
       As time went on, I found myself spending more time in the business realm
       and less in the technical realm. This shift rekindled my passion for
       programming. At the beginning of 2023, I decided to take a career break to
@@ -86,7 +116,7 @@ export default function Portfolio({ loadingState }) {
   );
 
   const seven = (
-    <p className="pb-2 text-start opacity-70">
+    <p className="pb-2 text-start opacity-80">
       Now, I enjoy creating full-stack applications, finding satisfaction in
       producing high-quality, reliable, and aesthetically pleasing code.
     </p>
@@ -494,7 +524,10 @@ export default function Portfolio({ loadingState }) {
                 className="nav-items mt-20"
                 // style={{ transitionDelay: `${300}ms` }}
               >
-                <TableOfContents />
+                <TableOfContents
+                  activeId={activeId}
+                  setActiveId={setActiveId}
+                />
               </div>
             </CSSTransition>
           </div>
@@ -539,13 +572,14 @@ export default function Portfolio({ loadingState }) {
           </div>
         </header>
         <div className="relative w-1/2 max-w-[500px]">
-          <section>
-            <div>
+          <section className="" id="about" ref={nodeRefAboutSection}>
+            <div className="">
               <h2 id="about" className="absolute top-[-100px] h-0 opacity-0">
                 About
               </h2>
             </div>
-            <div>
+            <div className="section-content relative">
+              <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
               {items2.map((item, i) => {
                 const node = item[0];
                 return (
@@ -569,7 +603,11 @@ export default function Portfolio({ loadingState }) {
               })}
             </div>
           </section>
-          <section className="relative mt-[100px]">
+          <section
+            id="technologies"
+            ref={nodeRefTechnologiesSection}
+            className="relative mt-[100px] hover:opacity-100"
+          >
             <div>
               <h2
                 id="technologies"
@@ -578,7 +616,8 @@ export default function Portfolio({ loadingState }) {
                 Technologies
               </h2>
             </div>
-            <div className="flex flex-wrap justify-center gap-1">
+            <div className="section-content relative flex flex-wrap justify-start gap-1">
+              <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
               {items3.map((item, i) => {
                 return (
                   <CSSTransition
@@ -608,6 +647,7 @@ export default function Portfolio({ loadingState }) {
             nodeRef={nodeRefProjectsSection}
           >
             <section
+              id="projects"
               ref={nodeRefProjectsSection}
               className="projects-section relative mt-[100px]"
               style={{ transitionDelay: `${500}ms` }}
@@ -620,98 +660,22 @@ export default function Portfolio({ loadingState }) {
                   Projects
                 </h2>
               </div>
-              <div>
-                <p>
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test
-                </p>
-                <p>
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test
-                </p>
-                <p>
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test
-                </p>
-              </div>
+              <ul className="section-content relative">
+                <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
+
+                <li>
+                  <div className="group relative grid transition-all">
+                    <div className="aspect-auto h-auto w-[200px]">
+                      <div>Yogato</div>
+                      <img
+                        src={yogato}
+                        alt=""
+                        className="aspect-auto h-[200px] w-auto"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </section>
           </CSSTransition>
           <CSSTransition
@@ -721,6 +685,7 @@ export default function Portfolio({ loadingState }) {
             nodeRef={nodeRefExperienceSection}
           >
             <section
+              id="experience"
               ref={nodeRefExperienceSection}
               className="experience-section relative mt-[100px]"
               style={{ transitionDelay: `${1000}ms` }}
@@ -733,7 +698,9 @@ export default function Portfolio({ loadingState }) {
                   Experience
                 </h2>
               </div>
-              <div>
+              <div className="section-content relative">
+                <div className="shadow-div absolute left-0 top-0 h-full w-[0.5px]"></div>
+
                 <p>
                   testtest test test test test esttest test test test test
                   esttest test test test test esttest test test test test
