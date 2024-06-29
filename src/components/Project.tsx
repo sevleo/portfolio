@@ -50,7 +50,7 @@ export default function Project({
             {projectTechnologies.map((tech) => (
               <div
                 key={tech}
-                className="rounded-full bg-[#072c15] pb-1 pl-2 pr-2 pt-1 text-xs font-medium text-[#3bde77]"
+                className="rounded-full bg-[#072c15] pb-[5px] pl-[10px] pr-[10px] pt-[5px] text-xs font-medium text-[#3bde77]"
               >
                 {tech}
               </div>

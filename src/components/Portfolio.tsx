@@ -222,7 +222,7 @@ export default function Portfolio({ loadingState }) {
             </CSSTransition>
           </div>
         </header>
-        <div className="relative w-1/2 max-w-[500px]">
+        <div className="relative w-1/2 max-w-[600px]">
           <section className="" id="about" ref={nodeRefAboutSection}>
             <h2 id="about-h2" className="absolute top-[-100px] h-0 opacity-0">
               About
