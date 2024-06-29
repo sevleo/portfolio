@@ -107,15 +107,6 @@ export const useMainProjects = () => {
         "A minimalist shopping cart implementation with ReactJS. Fetching products data from MockShop API and storing it locally in the browser. Using React components with states to implement neat and smooth user experience.",
       technologies: ["React", "JavaScript", "TailwindCSS"],
     },
-    {
-      link: "https://sevleo.github.io/TOP-Battleship/",
-      githublink: "https://github.com/sevleo/TOP-Battleship",
-      imgSrc: battleship,
-      projectName: "Battleship Game",
-      projectDescription:
-        "In this project, I challenged myself to implement the battleship game using pure javascript only. No external libraries or frameworks.",
-      technologies: ["JavaScript", "CSS", "HTML"],
-    },
 
     {
       link: "https://sevleo.github.io/TOP-RestaurantMenu/",
@@ -124,6 +115,15 @@ export const useMainProjects = () => {
       projectName: "Nova Vista Cafe",
       projectDescription:
         "Playing with CSS to implement an interesting paralax effect with the background image. A nice little project intended to learn some CSS tricks.",
+      technologies: ["JavaScript", "CSS", "HTML"],
+    },
+    {
+      link: "https://sevleo.github.io/TOP-Battleship/",
+      githublink: "https://github.com/sevleo/TOP-Battleship",
+      imgSrc: battleship,
+      projectName: "Battleship Game",
+      projectDescription:
+        "In this project, I challenged myself to implement the battleship game using pure javascript only. No external libraries or frameworks.",
       technologies: ["JavaScript", "CSS", "HTML"],
     },
   ];

@@ -3,6 +3,7 @@ import { useEffect, useState, useRef, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createRef } from "react";
 import Project from "./Project";
+import Experience from "./Experience";
 import {
   useIntroNodes,
   useAboutNodes,
@@ -10,6 +11,7 @@ import {
   useConnectNodes,
 } from "./hooks/useNodes";
 import { useProjects, useMainProjects } from "./hooks/useProjects";
+import { useExperiences } from "./hooks/useExperiences";
 
 // Images of projects
 import yogato from "../assets/yogato.png";
@@ -17,6 +19,8 @@ import nuevashop from "../assets/nuevashop.png";
 
 export default function Portfolio({ loadingState }) {
   const projects = useMainProjects();
+  const experiences = useExperiences();
+
   // Loading nodes
   const items1 = useIntroNodes();
   const items2 = useAboutNodes();
@@ -182,7 +186,7 @@ export default function Portfolio({ loadingState }) {
               </div>
             </CSSTransition>
           </div>
-          <div className="mb-20 mt-auto flex flex-col items-start gap-2">
+          <div className="mb-20 mt-auto flex flex-col items-start gap-2 pb-[10px]">
             <ul className="flex gap-5">
               {items4.map((item, i) => {
                 return (
@@ -213,7 +217,7 @@ export default function Portfolio({ loadingState }) {
             >
               <a
                 href="mailto:seva.leonov@hotmail.com"
-                className="connect text-sm text-[#b3b3b3] hover:text-[#ffffff] hover:opacity-100"
+                className="connect text-whiteDimmed text-sm hover:text-white hover:opacity-100"
                 ref={nodeRefEmail}
                 style={{ transitionDelay: `${1000}ms` }}
               >
@@ -222,13 +226,13 @@ export default function Portfolio({ loadingState }) {
             </CSSTransition>
           </div>
         </header>
-        <div className="relative w-1/2 max-w-[600px]">
+        <div className="relative mb-20 h-fit w-1/2 max-w-[550px]">
           <section className="" id="about" ref={nodeRefAboutSection}>
             <h2 id="about-h2" className="absolute top-[-100px] h-0 opacity-0">
               About
             </h2>
             <div
-              className={`section-content relative ${showBorder ? "show-border" : ""}`}
+              className={`section-content relative ${showBorder ? "show-border" : ""} `}
             >
               {items2.map((item, i) => {
                 return (
@@ -346,15 +350,18 @@ export default function Portfolio({ loadingState }) {
                   Experience
                 </h2>
               </div>
-              <div
-                className={`section-content relative ${showBorder ? "show-border" : ""}`}
+              <ul
+                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[80px]`}
               >
-                <p>
-                  testtest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                  esttest test test test test esttest test test test test
-                </p>
-              </div>
+                {experiences.map((experience) => (
+                  <Experience
+                    key={experience.dates}
+                    dates={experience.dates}
+                    roleCompany={experience.roleCompany}
+                    jobDescription={experience.jobDescription}
+                  />
+                ))}
+              </ul>
             </section>
           </CSSTransition>
         </div>

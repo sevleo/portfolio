@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--whiteSlightlyDimmed);
+  background-color: var(--globalBackground);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,6 +17,22 @@
   -moz-osx-font-smoothing: grayscale;
 
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* Colors */
+  /* Text colors */
+  --white: #ffffff;
+  --whiteDimmed: #cccccc;
+  --whiteSlightlyDimmed: #e6e6e6;
+  --green: #22c55e;
+  --greenLight: #a8f0c2;
+
+  /* Background colors */
+  --globalBackground: #141414;
+  --darkGreen: #072c15;
+
+  /* Border colors */
+  --imgBorderHover: #415471;
+  --imgBorder: #2f3c51;
 }
 
 #root {
@@ -128,39 +144,38 @@ body {
 /* Table of Contents */
 
 a {
-  color: white;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+}
+
+nav li > a {
   opacity: 0.6;
 }
 
 nav li.active > a {
-  color: #22c55e;
+  color: var(--green);
   opacity: 1;
 }
 
 nav li:hover > a {
-  color: #22c55e;
+  color: var(--green);
   opacity: 1;
 }
 
 nav li > div {
   width: 30px;
-  background-color: white;
-  opacity: 0.6;
+  background-color: var(--whiteDimmed);
   transition: all 0.2s ease-in-out;
 }
 
 nav li.active > div {
-  background-color: #22c55e;
+  background-color: var(--green);
   width: 50px;
-  opacity: 1;
 }
 
 nav li:hover > div {
-  background-color: #22c55e;
+  background-color: var(--green);
   width: 50px;
-  opacity: 1;
 }
 
 /* Transition styles */
@@ -220,6 +235,10 @@ nav li:hover > div {
 .tech-enter-done {
   opacity: 1;
   transform: translateY(0px);
+}
+
+.connect a {
+  opacity: 0.6;
 }
 
 .connect {
@@ -290,7 +309,7 @@ section > .section-content {
 section > .section-content.show-border {
   opacity: 1;
   transition: all 0.4s ease-in-out;
-  border-left: 0.5px solid green;
+  border-left: 0.5px solid var(--green);
 }
 
 section.fade > .section-content {
@@ -300,26 +319,11 @@ section.fade > .section-content {
 }
 
 section > .section-content > .shadow-div {
-  background-color: rgba(255, 255, 255, 0.8);
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  /* box-shadow: -3px 0px 8px 1px rgba(255, 255, 255, 0.4); */
 }
 
 section.fade > .section-content > .shadow-div {
   opacity: 0;
   box-shadow: none;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}  */

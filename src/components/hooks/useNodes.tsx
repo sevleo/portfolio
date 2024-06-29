@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 export const useIntroNodes = () => {
   const one = useMemo(
-    () => <p className={`pb-2 text-start text-green-500`}>Hi, my name is</p>,
+    () => <p className={`text-green pb-2 text-start`}>Hi, my name is</p>,
     []
   );
 
@@ -35,7 +35,7 @@ export const useIntroNodes = () => {
 export const useAboutNodes = () => {
   const four = useMemo(
     () => (
-      <p className="pb-2 text-start opacity-80">
+      <p className="text-whiteDimmed pb-2 text-start">
         Back in 2014, out of curiosity, I opened a Java tutorial. A year later,
         I found employment at a consulting firm, working on Salesforce projects
         as a Salesforce Developer.
@@ -46,7 +46,7 @@ export const useAboutNodes = () => {
 
   const five = useMemo(
     () => (
-      <p className="pb-2 text-start opacity-80">
+      <p className="text-whiteDimmed pb-2 text-start">
         Each time I stayed on a project for a while, I mastered its intricacies.
         I developed an intuitive sense for what's going on in the system and
         naturally took control of the system's overall dynamics. This
@@ -59,7 +59,7 @@ export const useAboutNodes = () => {
 
   const six = useMemo(
     () => (
-      <p className="pb-2 text-start opacity-80">
+      <p className="text-whiteDimmed pb-2 text-start">
         As time went on, I found myself spending more time in the business realm
         and less in the technical realm. This shift rekindled my passion for
         programming. At the beginning of 2023, I decided to take a career break
@@ -72,7 +72,7 @@ export const useAboutNodes = () => {
 
   const seven = useMemo(
     () => (
-      <p className="pb-2 text-start opacity-80">
+      <p className="text-whiteDimmed pb-2 text-start">
         Now, I enjoy creating full-stack applications, finding satisfaction in
         producing high-quality, reliable, and aesthetically pleasing code.
       </p>

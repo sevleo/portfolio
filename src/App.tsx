@@ -62,7 +62,7 @@ function App() {
         <div
           className={`loading flex h-full w-full items-center justify-center ${loadingState}`}
         >
-          <div className="loading__mask bg-[#141414]"></div>
+          <div className="loading__mask bg-globalBackground"></div>
           <div className="loader">
             <Vortex
               visible={true}
