@@ -96,6 +96,7 @@ export const useMainProjects = () => {
       projectName: "Yogato",
       projectDescription:
         "A full-stack application dedicated to Yoga. The application assists yoga instructors and experienced practitioners in creating and following through their sequences. It features voice announcements, custom-made sequence timer, a smooth and fast user experience, and support for both desktop and mobile.",
+      technologies: ["React", "NodeJS", "TailwindCSS", "TypeScript", "MongoDB"],
     },
     {
       link: "https://heroic-horse-859bac.netlify.app/",
@@ -104,6 +105,7 @@ export const useMainProjects = () => {
       projectName: "Nueva Shop",
       projectDescription:
         "A minimalist shopping cart implementation with ReactJS. Fetching products data from MockShop API and storing it locally in the browser. Using React components with states to implement neat and smooth user experience.",
+      technologies: ["React", "JavaScript", "TailwindCSS"],
     },
     {
       link: "https://sevleo.github.io/TOP-Battleship/",
@@ -112,6 +114,7 @@ export const useMainProjects = () => {
       projectName: "Battleship Game",
       projectDescription:
         "In this project, I challenged myself to implement the battleship game using pure javascript only. No external libraries or frameworks.",
+      technologies: ["JavaScript", "CSS", "HTML"],
     },
 
     {
@@ -121,6 +124,7 @@ export const useMainProjects = () => {
       projectName: "Nova Vista Cafe",
       projectDescription:
         "Playing with CSS to implement an interesting paralax effect with the background image. A nice little project intended to learn some CSS tricks.",
+      technologies: ["JavaScript", "CSS", "HTML"],
     },
   ];
 

@@ -322,6 +322,7 @@ export default function Portfolio({ loadingState }) {
                     imgSrc={project.imgSrc}
                     projectName={project.projectName}
                     projectDescription={project.projectDescription}
+                    projectTechnologies={project.technologies}
                   />
                 ))}
               </ul>

@@ -3,6 +3,7 @@ export default function Project({
   imgSrc,
   projectName,
   projectDescription,
+  projectTechnologies,
 }) {
   const handleProjectClick = () => {
     window.open(link, "_blank");
@@ -44,6 +45,16 @@ export default function Project({
             <p className="text-start text-sm opacity-80">
               {projectDescription}
             </p>
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {projectTechnologies.map((tech) => (
+              <div
+                key={tech}
+                className="rounded-full bg-[#072c15] pb-1 pl-2 pr-2 pt-1 text-xs font-medium text-[#3bde77]"
+              >
+                {tech}
+              </div>
+            ))}
           </div>
         </div>
       </div>
