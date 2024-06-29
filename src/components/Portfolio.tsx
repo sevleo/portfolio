@@ -44,11 +44,6 @@ export default function Portfolio({ loadingState }) {
   const nodeRefProjectsSection = useRef(null);
   const nodeRefExperienceSection = useRef(null);
 
-  // Intro nodeRefs (items1)
-  const nodeRef1 = useRef(null);
-  const nodeRef2 = useRef(null);
-  const nodeRef3 = useRef(null);
-
   // Nav nodeRef
   const nodeRef4 = useRef(null);
 
@@ -62,33 +57,36 @@ export default function Portfolio({ loadingState }) {
   const nodeRefEmail = useRef(null);
 
   // Intro nodes
-  const one = (
-    <p className={`pb-2 text-start text-green-500`}>Hi, my name is</p>
+  const one = useMemo(
+    () => <p className={`pb-2 text-start text-green-500`}>Hi, my name is</p>,
+    []
   );
 
-  const two = (
-    <p
-      className={`text-start font-noto-sans text-[60px] font-[600] leading-none`}
-    >
-      Seva <span className={``}>Leo</span>.
-    </p>
+  const two = useMemo(
+    () => (
+      <p
+        className={`text-start font-noto-sans text-[60px] font-[600] leading-none`}
+      >
+        Seva <span className={``}>Leo</span>.
+      </p>
+    ),
+    []
   );
 
-  const three = (
-    <p className="mt-4 w-[70%] text-start">
-      I'm a full-stack software developer specializing on building{" "}
-      <span className="text-green-500">fast </span>
-      and <span className="text-green-500">responsive </span> websites with
-      React and NodesJS.
-    </p>
+  const three = useMemo(
+    () => (
+      <p className="mt-4 w-[70%] text-start">
+        I'm a full-stack software developer specializing on building{" "}
+        <span className="text-green-500">fast </span>
+        and <span className="text-green-500">responsive </span> websites with
+        React and NodesJS.
+      </p>
+    ),
+    []
   );
 
   // Intro list
-  const items1 = [
-    [one, nodeRef1],
-    [two, nodeRef2],
-    [three, nodeRef3],
-  ];
+  const items1 = useMemo(() => [one, two, three], [one, two, three]);
 
   // About nodes
   const four = (
@@ -416,6 +414,9 @@ export default function Portfolio({ loadingState }) {
   );
 
   // Connect nodeRef
+  const refs1 = useRef([]);
+
+  // Connect nodeRef
   const refs4 = useRef([]);
 
   // Connect list
@@ -426,16 +427,17 @@ export default function Portfolio({ loadingState }) {
 
   // Create nodeRefs
   useEffect(() => {
+    refs1.current = items1.map((_, i) => refs1.current[i] ?? createRef());
     refs4.current = items4.map((_, i) => refs4.current[i] ?? createRef());
-  }, [items4]);
+  }, [items1, items4]);
 
   const [introComplete, setIntroComplete] = useState(false);
 
   const handleIntroEntered = () => {
-    // Check if all intro elements have completed entering
+    // Check if all Intro elements have completed entering
     if (
-      items1.every((item) =>
-        item[1].current?.classList.contains("intro-enter-done")
+      refs1.current.every((item) =>
+        item.current?.classList.contains("intro-enter-done")
       )
     ) {
       setTimeout(() => {
@@ -462,7 +464,7 @@ export default function Portfolio({ loadingState }) {
   const [techComplete, setTechComplete] = useState(false);
 
   const handleTechEntered = () => {
-    // Check if all about elements have completed entering
+    // Check if all Tech elements have completed entering
     if (
       refs3.current.every((item) =>
         item.current?.classList.contains("tech-enter-done")
@@ -503,11 +505,10 @@ export default function Portfolio({ loadingState }) {
           <TransitionGroup component={null}>
             {loadingState === "loading-complete" &&
               items1.map((item, i) => {
-                const node = item[0];
                 return (
                   <CSSTransition
                     key={i}
-                    nodeRef={item[1]}
+                    nodeRef={refs1.current[i]}
                     classNames="intro"
                     timeout={300}
                     onEntered={handleIntroEntered}
@@ -515,9 +516,9 @@ export default function Portfolio({ loadingState }) {
                     <div
                       className="intro"
                       style={{ transitionDelay: `${i + 0}00ms` }}
-                      ref={item[1]}
+                      ref={refs1.current[i]}
                     >
-                      {node}
+                      {item}
                     </div>
                   </CSSTransition>
                 );
