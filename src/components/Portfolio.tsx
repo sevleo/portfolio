@@ -2,7 +2,8 @@ import TableOfContents from "./TableOfContents";
 import { useEffect, useState, useRef, useMemo } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createRef } from "react";
-import yogato from "./yogato.png";
+import yogato from "../assets/yogato.png";
+import Project from "./Project";
 
 export default function Portfolio({ loadingState }) {
   const [activeId, setActiveId] = useState(undefined);
@@ -89,9 +90,9 @@ export default function Portfolio({ loadingState }) {
   // About nodes
   const four = (
     <p className="pb-2 text-start opacity-80">
-      I started my programming career in 2014 when, out of curiosity, I decided
-      to explore a Java tutorial. A year later, I found employment at a
-      consulting firm, working on Salesforce projects as a Salesforce Developer.
+      Back in 2014, out of curiosity, I opened a Java tutorial. A year later, I
+      found employment at a consulting firm, working on Salesforce projects as a
+      Salesforce Developer.
     </p>
   );
 
@@ -671,34 +672,18 @@ export default function Portfolio({ loadingState }) {
                 </h2>
               </div>
               <ul
-                className={`section-content relative ${showBorder ? "show-border" : ""}`}
+                className={`section-content relative ${showBorder ? "show-border" : ""} hover:cursor-pointer`}
               >
-                <li>
-                  <div className="group relative flex gap-4 transition-all">
-                    <div className="col-auto w-[200px]">
-                      <img src={yogato} alt="" className="h-auto max-w-full" />
-                    </div>
-                    <div className="flex flex-col">
-                      <p>
-                        Yogato{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                      </p>
-                      <p>test </p>
-                    </div>
-                  </div>
-                </li>
+                <Project
+                  link="https://yogato.netlify.app"
+                  imgSrc={yogato}
+                  projectName="Yogato"
+                  projectDescription="A full-stack application dedicated to Yoga. The application
+              assists yoga instructors and experienced practitioners in creating
+              and following through their sequences. It features voice
+              announcements, custom-made sequence timer, a smooth and fast user
+              experience, and support for both desktop and mobile."
+                ></Project>
               </ul>
             </section>
           </CSSTransition>
