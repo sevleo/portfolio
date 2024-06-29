@@ -62,7 +62,7 @@ export default function Portfolio({ loadingState }) {
     ];
 
     sectionRefs.forEach((ref) => {
-      if (activeId === ref.current.id) {
+      if (activeId === ref.current.id + "-h2") {
         ref.current.classList.remove("fade");
       } else {
         ref.current.classList.add("fade");
@@ -224,11 +224,9 @@ export default function Portfolio({ loadingState }) {
         </header>
         <div className="relative w-1/2 max-w-[500px]">
           <section className="" id="about" ref={nodeRefAboutSection}>
-            <div className="">
-              <h2 id="about" className="absolute top-[-100px] h-0 opacity-0">
-                About
-              </h2>
-            </div>
+            <h2 id="about-h2" className="absolute top-[-100px] h-0 opacity-0">
+              About
+            </h2>
             <div
               className={`section-content relative ${showBorder ? "show-border" : ""}`}
             >
@@ -261,7 +259,7 @@ export default function Portfolio({ loadingState }) {
           >
             <div>
               <h2
-                id="technologies"
+                id="technologies-h2"
                 className="absolute top-[-100px] h-0 opacity-0"
               >
                 Technologies
@@ -306,7 +304,7 @@ export default function Portfolio({ loadingState }) {
             >
               <div>
                 <h2
-                  id="projects"
+                  id="projects-h2"
                   className="absolute top-[-100px] h-0 opacity-0"
                 >
                   Projects
@@ -342,7 +340,7 @@ export default function Portfolio({ loadingState }) {
             >
               <div>
                 <h2
-                  id="experience"
+                  id="experience-h2"
                   className="absolute top-[-100px] h-0 opacity-0"
                 >
                   Experience
