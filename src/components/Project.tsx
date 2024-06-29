@@ -9,9 +9,9 @@ export default function Project({
   };
 
   return (
-    <li className="mb-10">
+    <li className="">
       <div
-        className="group relative flex gap-4 transition-all"
+        className="group relative flex gap-4 transition-all hover:cursor-pointer"
         onClick={handleProjectClick}
       >
         <div className="col-auto w-[150px] rounded-md">

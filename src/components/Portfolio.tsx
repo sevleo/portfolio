@@ -9,14 +9,14 @@ import {
   useTechNodes,
   useConnectNodes,
 } from "./hooks/useNodes";
-import { useProjects } from "./hooks/useProjects";
+import { useProjects, useMainProjects } from "./hooks/useProjects";
 
 // Images of projects
 import yogato from "../assets/yogato.png";
 import nuevashop from "../assets/nuevashop.png";
 
 export default function Portfolio({ loadingState }) {
-  const projects = useProjects();
+  const projects = useMainProjects();
   // Loading nodes
   const items1 = useIntroNodes();
   const items2 = useAboutNodes();
@@ -313,7 +313,7 @@ export default function Portfolio({ loadingState }) {
                 </h2>
               </div>
               <ul
-                className={`section-content relative ${showBorder ? "show-border" : ""} hover:cursor-pointer`}
+                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[80px]`}
               >
                 {projects.map((project) => (
                   <Project
