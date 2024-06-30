@@ -1,26 +1,10 @@
-<!-- PROJECT LOGO -->
-<br />
-
-<!-- TABLE OF CONTENTS -->
-
 ## About The Project
 
-This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with.
+This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. I created this website with React and TailwindCSS, and hosted on Netlify.
 
 <!-- ABOUT THE PROJECT -->
 
 [![Product Name Screen Shot][product-screenshot]](https://yogato.netlify.app)
-
-### Main technologies
-
-[![React][React.js]][React-url]
-[![Typescript][Typescript]][Typescript-url]
-[![Javascript][Javascript]][Javascript-url]
-[![TailwindCSS][TailwindCSS]][TailwindCSS-url]
-
-### Hosting
-
-- [Netlify](https://www.netlify.com)
 
 <!-- USAGE EXAMPLES -->
 
