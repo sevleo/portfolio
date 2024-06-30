@@ -22,7 +22,7 @@ export const useExperiences = () => {
       ],
     },
     {
-      dates: "JUL 2021 — MAR 2022",
+      dates: "JAN 2021 — MAR 2022",
       roleCompany: "Solution Architect · Customertimes Latvia",
       jobDescription: [
         "I successfully implemented Sales Cloud solutions, overseeing organization merges and migrations. My role involved analyzing databases and current configurations, mapping business processes to streamline operations, and identifying areas for improvement. ",
@@ -30,7 +30,7 @@ export const useExperiences = () => {
       ],
     },
     {
-      dates: "JAN 2020 — JUL 2021",
+      dates: "JUL 2020 — JAN 2021",
       roleCompany: "Salesforce Architect · CT Consulting",
       jobDescription: [
         "Led development of a clinical trial app for a large US pharmaceutical company. Worked closely with BAs to refine requirements and to design modular solutions.",
