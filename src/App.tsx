@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Vortex } from "react-loader-spinner";
 
 function App() {
-  const [loadingState, setLoadingState] = useState("loading-in");
+  const [loadingState, setLoadingState] = useState<string>("loading-in");
 
   const router = createBrowserRouter([
     {

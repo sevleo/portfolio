@@ -140,7 +140,7 @@ const Headings = ({ headings, activeId }: any) => (
   </ul>
 );
 
-const TableOfContents = ({ activeId, setActiveId }) => {
+const TableOfContents = ({ activeId, setActiveId }: any) => {
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
 

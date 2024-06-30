@@ -1,16 +1,33 @@
-import { useRef } from "react";
+import { useRef, RefObject } from "react";
 import {
   useHandleMouseEnterItem,
   useHandleMouseLeaveItem,
 } from "./hooks/useHandleMouseEvent";
+
+interface ExperienceProps {
+  dates: string;
+  roleCompany: string;
+  jobDescription: string[];
+  nodeRefExperienceSection: RefObject<HTMLElement>;
+}
 
 export default function Experience({
   dates,
   roleCompany,
   jobDescription,
   nodeRefExperienceSection,
-}) {
-  const linkMap = {
+}: ExperienceProps) {
+  interface LinkMapProps {
+    Aura: string;
+    Lightning: string;
+    Visualforce: string;
+    ApexClasses: string;
+    ApexTriggers: string;
+    ApexBatches: string;
+    YoGato: string;
+    LeetCode: string;
+  }
+  const linkMap: LinkMapProps = {
     Aura: "https://developer.salesforce.com/docs/component-library/bundle/aura:component/documentation",
     Lightning: "https://developer.salesforce.com/docs/platform/lwc/overview",
     Visualforce:
@@ -25,15 +42,15 @@ export default function Experience({
     LeetCode: "https://leetcode.com/u/sevaleo/",
   };
 
-  const createLinkedDescription = (description) => {
+  const createLinkedDescription = (description: string) => {
     const words = description.split(" ");
     return words.map((word, index) => {
       const cleanWord = word.replace(/[^a-zA-Z]/g, ""); // Remove punctuation
-      if (linkMap[cleanWord]) {
+      if (linkMap[cleanWord as keyof LinkMapProps]) {
         return (
           <a
             key={index}
-            href={linkMap[cleanWord]}
+            href={linkMap[cleanWord as keyof LinkMapProps]}
             target="_blank"
             className="group-hover:text-green group-hover:hover:text-greenLight underline opacity-100 hover:no-underline"
           >
@@ -79,11 +96,8 @@ export default function Experience({
           {roleCompany}
         </p>
         <div className="mt-3 flex flex-col gap-2">
-          {jobDescription.map((description) => (
-            <p
-              key={createLinkedDescription(description)}
-              className="text-whiteDimmed text-start text-sm"
-            >
+          {jobDescription.map((description, index) => (
+            <p key={index} className="text-whiteDimmed text-start text-sm">
               {createLinkedDescription(description)}
             </p>
           ))}

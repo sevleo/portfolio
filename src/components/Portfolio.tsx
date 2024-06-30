@@ -18,7 +18,11 @@ import {
   useHandleMouseLeaveSection,
 } from "./hooks/useHandleMouseEvent";
 
-export default function Portfolio({ loadingState }) {
+interface PortfolioProps {
+  loadingState: string;
+}
+
+export default function Portfolio({ loadingState }: PortfolioProps) {
   const projects = useMainProjects();
   const experiences = useExperiences();
 
@@ -29,10 +33,10 @@ export default function Portfolio({ loadingState }) {
   const items4 = useConnectNodes();
 
   // Creating containers for nodeRefs
-  const refs1 = useRef([]);
-  const refs2 = useRef([]);
-  const refs3 = useRef([]);
-  const refs4 = useRef([]);
+  const refs1 = useRef<Array<React.MutableRefObject<HTMLDivElement>>>([]);
+  const refs2 = useRef<Array<React.MutableRefObject<HTMLDivElement>>>([]);
+  const refs3 = useRef<Array<React.MutableRefObject<HTMLDivElement>>>([]);
+  const refs4 = useRef<Array<React.MutableRefObject<HTMLLIElement>>>([]);
 
   // Creating nodeRefs
   useEffect(() => {
@@ -43,19 +47,19 @@ export default function Portfolio({ loadingState }) {
   }, [items1, items2, items3, items4]);
 
   // Section nodeRefs
-  const nodeRefAboutSection = useRef(null);
-  const nodeRefTechnologiesSection = useRef(null);
-  const nodeRefProjectsSection = useRef(null);
-  const nodeRefExperienceSection = useRef(null);
+  const nodeRefAboutSection = useRef<HTMLElement>(null);
+  const nodeRefTechnologiesSection = useRef<HTMLElement>(null);
+  const nodeRefProjectsSection = useRef<HTMLElement>(null);
+  const nodeRefExperienceSection = useRef<HTMLElement>(null);
 
-  const nodeRefProjectsUl = useRef(null);
-  const nodeRefExperienceUl = useRef(null);
+  const nodeRefProjectsUl = useRef<HTMLUListElement>(null);
+  const nodeRefExperienceUl = useRef<HTMLUListElement>(null);
 
   // Nav nodeRef
-  const nodeRef4 = useRef(null);
+  const nodeRef4 = useRef<HTMLDivElement>(null);
 
   // Email nodeRef
-  const nodeRefEmail = useRef(null);
+  const nodeRefEmail = useRef<HTMLAnchorElement>(null);
 
   // State for active Table of Content item
   const [activeId, setActiveId] = useState(undefined);
@@ -70,10 +74,12 @@ export default function Portfolio({ loadingState }) {
     ];
 
     sectionRefs.forEach((ref) => {
-      if (activeId === ref.current.id + "-h2") {
-        ref.current.classList.remove("fade");
-      } else {
-        ref.current.classList.add("fade");
+      if (ref.current) {
+        if (activeId === ref.current.id + "-h2") {
+          ref.current.classList.remove("fade");
+        } else {
+          ref.current.classList.add("fade");
+        }
       }
     });
   }, [activeId]);

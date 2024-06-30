@@ -1,8 +1,17 @@
-import { useRef } from "react";
+import { useRef, RefObject } from "react";
 import {
   useHandleMouseEnterItem,
   useHandleMouseLeaveItem,
 } from "./hooks/useHandleMouseEvent";
+
+interface ProjectProps {
+  link: string;
+  imgSrc: string;
+  projectName: string;
+  projectDescription: string;
+  projectTechnologies: string[];
+  nodeRefProjectsSection: RefObject<HTMLElement>;
+}
 
 export default function Project({
   link,
@@ -11,7 +20,7 @@ export default function Project({
   projectDescription,
   projectTechnologies,
   nodeRefProjectsSection,
-}) {
+}: ProjectProps) {
   const handleProjectClick = () => {
     window.open(link, "_blank");
   };
