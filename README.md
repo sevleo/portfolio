@@ -2,7 +2,7 @@
 
 ##
 
-<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I have experience working with. Built with React, hosted on Netlify. The website is accessed by this <a href="https://heroic-horse-859bac.netlify.app/">link</a></p>
+<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I have experience working with. Built with React, hosted on Netlify. The website can be accessed <a href="https://heroic-horse-859bac.netlify.app/">here</a>.</p>
 
 <!-- ABOUT THE PROJECT -->
 
