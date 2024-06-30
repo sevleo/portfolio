@@ -271,7 +271,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
                     key={i}
                     nodeRef={refs2.current[i]}
                     classNames="about"
-                    timeout={500}
+                    timeout={400}
                     onEntered={handleAboutEntered}
                   >
                     <div

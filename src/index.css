@@ -78,15 +78,14 @@ body {
   position: absolute;
   transform: translateY(-110%);
   backface-visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .loading-in .loading__mask {
-  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateY(0);
 }
 
 .loading-out .loading__mask {
-  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateY(110%);
 }
 
@@ -204,7 +203,7 @@ nav li:hover > div {
   opacity: 0;
   transition: opacity 1000ms;
   transition:
-    opacity 500ms,
+    opacity 400ms,
     transform 300ms;
   transform: translateX(200px);
 }
