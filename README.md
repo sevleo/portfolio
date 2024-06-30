@@ -1,8 +1,12 @@
 <h3 align="center">sevaleo.netlify.com</h3>
 
-<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. I created this website with React and TailwindCSS, and hosted on Netlify.</p>
+##
 
-<p align="center">The website is accessed by this link: [Seva Leo Portfolio](https://heroic-horse-859bac.netlify.app/).</p>
+<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. .</p>
+
+<p align="center">Built with React, hosted on Netlify.</p>
+
+<p align="center">The website is accessed by this <a href="https://heroic-horse-859bac.netlify.app/">link</a></p>
 
 <!-- ABOUT THE PROJECT -->
 
