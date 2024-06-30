@@ -43,3 +43,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [TailwindCSS-url]: https://tailwindcss.com/
 [MongoDB]: https://img.shields.io/badge/mongodb-20232A?style=for-the-badge&logo=mongodb
 [MongoDB-url]: https://www.mongodb.com/
+
+## Acknowledgements
+
+While all the code is of my authorship, design solutions are inspired by <a href="brittanychiang.com">brittanychiang.com</a>.
