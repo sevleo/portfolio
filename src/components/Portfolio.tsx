@@ -144,7 +144,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
 
       setTimeout(() => {
         setShowBorder(true);
-      }, 1400);
+      }, 1000);
     }
   };
 
@@ -243,7 +243,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               in={techComplete}
               nodeRef={nodeRefEmail}
               classNames="connect"
-              timeout={500}
+              timeout={200}
             >
               <a
                 href="mailto:seva.leonov@hotmail.com"
