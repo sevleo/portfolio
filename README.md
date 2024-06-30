@@ -1,8 +1,8 @@
-## About The Project
+<h3 align="center">sevaleo.netlify.com</h3>
 
-This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. I created this website with React and TailwindCSS, and hosted on Netlify.
+<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. I created this website with React and TailwindCSS, and hosted on Netlify.</p>
 
-The website is accessed by this link: [Seva Leo Portfolio](https://heroic-horse-859bac.netlify.app/).
+<p align="center">The website is accessed by this link: [Seva Leo Portfolio](https://heroic-horse-859bac.netlify.app/).</p>
 
 <!-- ABOUT THE PROJECT -->
 
