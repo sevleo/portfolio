@@ -72,7 +72,7 @@ export const useAboutNodes = () => {
 
   const seven = useMemo(
     () => (
-      <p className="text-whiteDimmed pb-2 text-start">
+      <p className="text-whiteDimmed text-start">
         Now, I enjoy creating full-stack applications, finding satisfaction in
         producing high-quality, reliable, and aesthetically pleasing code.
       </p>
@@ -274,7 +274,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://github.com/sevleo"
-        className="hover:opacity-100"
+        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -295,7 +295,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://www.linkedin.com/in/seva-leo-733b09114/"
-        className="hover:opacity-100"
+        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -316,7 +316,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://www.instagram.com/seva_leo/"
-        className="hover:opacity-100"
+        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -338,7 +338,7 @@ export const useConnectNodes = () => {
       <a
         href="https://leetcode.com/u/sevaleo/"
         target="_blank"
-        className="hover:opacity-100"
+        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

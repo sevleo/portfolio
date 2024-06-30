@@ -1,18 +1,47 @@
+import { useRef } from "react";
+import {
+  useHandleMouseEnterItem,
+  useHandleMouseLeaveItem,
+} from "./hooks/useHandleMouseEvent";
+
 export default function Project({
   link,
   imgSrc,
   projectName,
   projectDescription,
   projectTechnologies,
+  nodeRefProjectsSection,
 }) {
   const handleProjectClick = () => {
     window.open(link, "_blank");
   };
 
+  const projectRef = useRef(null);
+
+  const handleProjectEnter = useHandleMouseEnterItem(
+    nodeRefProjectsSection.current !== null
+      ? nodeRefProjectsSection.current.childNodes[1].childNodes
+      : [],
+    projectRef,
+    "focus",
+    "unfocus"
+  );
+
+  const handleProjectLeave = useHandleMouseLeaveItem(
+    nodeRefProjectsSection.current !== null
+      ? nodeRefProjectsSection.current.childNodes[1].childNodes
+      : [],
+    "focus",
+    "unfocus"
+  );
+
   return (
     <li
-      className="group relative flex gap-6 transition-all hover:cursor-pointer"
+      ref={projectRef}
+      className="group relative flex gap-6 p-[20px] transition-all hover:cursor-pointer"
       onClick={handleProjectClick}
+      onMouseEnter={handleProjectEnter}
+      onMouseLeave={handleProjectLeave}
     >
       <div className="w-[180px] rounded-md">
         <img

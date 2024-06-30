@@ -1,4 +1,15 @@
-export default function Experience({ dates, roleCompany, jobDescription }) {
+import { useRef } from "react";
+import {
+  useHandleMouseEnterItem,
+  useHandleMouseLeaveItem,
+} from "./hooks/useHandleMouseEvent";
+
+export default function Experience({
+  dates,
+  roleCompany,
+  jobDescription,
+  nodeRefExperienceSection,
+}) {
   const linkMap = {
     Aura: "https://developer.salesforce.com/docs/component-library/bundle/aura:component/documentation",
     Lightning: "https://developer.salesforce.com/docs/platform/lwc/overview",
@@ -24,7 +35,7 @@ export default function Experience({ dates, roleCompany, jobDescription }) {
             key={index}
             href={linkMap[cleanWord]}
             target="_blank"
-            className="text-green hover:text-greenLight underline opacity-100 hover:no-underline"
+            className="group-hover:text-green group-hover:hover:text-greenLight underline opacity-100 hover:no-underline"
           >
             <span>{word} </span>
           </a>
@@ -34,8 +45,32 @@ export default function Experience({ dates, roleCompany, jobDescription }) {
     });
   };
 
+  const experienceRef = useRef(null);
+
+  const handleExperienceEnter = useHandleMouseEnterItem(
+    nodeRefExperienceSection.current !== null
+      ? nodeRefExperienceSection.current.childNodes[1].childNodes
+      : [],
+    experienceRef,
+    "focus",
+    "unfocus"
+  );
+
+  const handleExperienceLeave = useHandleMouseLeaveItem(
+    nodeRefExperienceSection.current !== null
+      ? nodeRefExperienceSection.current.childNodes[1].childNodes
+      : [],
+    "focus",
+    "unfocus"
+  );
+
   return (
-    <li className="group relative flex gap-6 transition-all">
+    <li
+      ref={experienceRef}
+      className="group relative flex gap-6 p-[20px] transition-all"
+      onMouseEnter={handleExperienceEnter}
+      onMouseLeave={handleExperienceLeave}
+    >
       <div className="min-w-[180px]">
         <p className={`text-whiteDimmed text-end text-sm`}>{dates}</p>
       </div>

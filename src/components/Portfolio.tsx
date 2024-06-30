@@ -1,5 +1,5 @@
 import TableOfContents from "./TableOfContents";
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createRef } from "react";
 import Project from "./Project";
@@ -10,12 +10,13 @@ import {
   useTechNodes,
   useConnectNodes,
 } from "./hooks/useNodes";
-import { useProjects, useMainProjects } from "./hooks/useProjects";
+import { useMainProjects } from "./hooks/useProjects";
 import { useExperiences } from "./hooks/useExperiences";
 
-// Images of projects
-import yogato from "../assets/yogato.png";
-import nuevashop from "../assets/nuevashop.png";
+import {
+  useHandleMouseEnterSection,
+  useHandleMouseLeaveSection,
+} from "./hooks/useHandleMouseEvent";
 
 export default function Portfolio({ loadingState }) {
   const projects = useMainProjects();
@@ -46,6 +47,9 @@ export default function Portfolio({ loadingState }) {
   const nodeRefTechnologiesSection = useRef(null);
   const nodeRefProjectsSection = useRef(null);
   const nodeRefExperienceSection = useRef(null);
+
+  const nodeRefProjectsUl = useRef(null);
+  const nodeRefExperienceUl = useRef(null);
 
   // Nav nodeRef
   const nodeRef4 = useRef(null);
@@ -138,6 +142,26 @@ export default function Portfolio({ loadingState }) {
     }
   };
 
+  const handleProjectsListEnter = useHandleMouseEnterSection(
+    nodeRefProjectsSection.current?.childNodes[1]?.childNodes || [],
+    "unfocus"
+  );
+
+  const handleProjectsListLeave = useHandleMouseLeaveSection(
+    nodeRefProjectsSection.current?.childNodes[1]?.childNodes || [],
+    "unfocus"
+  );
+
+  const handleExperienceListEnter = useHandleMouseEnterSection(
+    nodeRefExperienceSection.current?.childNodes[1]?.childNodes || [],
+    "unfocus"
+  );
+
+  const handleExperienceListLeave = useHandleMouseLeaveSection(
+    nodeRefExperienceSection.current?.childNodes[1]?.childNodes || [],
+    "unfocus"
+  );
+
   return (
     <>
       <div
@@ -217,7 +241,7 @@ export default function Portfolio({ loadingState }) {
             >
               <a
                 href="mailto:seva.leonov@hotmail.com"
-                className="connect text-whiteDimmed text-sm hover:text-white hover:opacity-100"
+                className="connect text-whiteDimmed hover:text-green text-sm"
                 ref={nodeRefEmail}
                 style={{ transitionDelay: `${1000}ms` }}
               >
@@ -259,7 +283,7 @@ export default function Portfolio({ loadingState }) {
           <section
             id="technologies"
             ref={nodeRefTechnologiesSection}
-            className="relative mt-[100px] hover:opacity-100"
+            className="relative mt-[120px]"
           >
             <div>
               <h2
@@ -303,7 +327,7 @@ export default function Portfolio({ loadingState }) {
             <section
               id="projects"
               ref={nodeRefProjectsSection}
-              className={`projects-section relative mt-[100px]`}
+              className={`projects-section relative mt-[120px]`}
               style={{ transitionDelay: `${500}ms` }}
             >
               <div>
@@ -315,7 +339,10 @@ export default function Portfolio({ loadingState }) {
                 </h2>
               </div>
               <ul
-                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[80px]`}
+                ref={nodeRefProjectsUl}
+                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[10px]`}
+                onMouseEnter={handleProjectsListEnter}
+                onMouseLeave={handleProjectsListLeave}
               >
                 {projects.map((project) => (
                   <Project
@@ -325,6 +352,7 @@ export default function Portfolio({ loadingState }) {
                     projectName={project.projectName}
                     projectDescription={project.projectDescription}
                     projectTechnologies={project.technologies}
+                    nodeRefProjectsSection={nodeRefProjectsSection}
                   />
                 ))}
               </ul>
@@ -339,7 +367,7 @@ export default function Portfolio({ loadingState }) {
             <section
               id="experience"
               ref={nodeRefExperienceSection}
-              className={`experience-section relative mt-[100px]`}
+              className={`experience-section relative mt-[120px]`}
               style={{ transitionDelay: `${1000}ms` }}
             >
               <div>
@@ -351,7 +379,10 @@ export default function Portfolio({ loadingState }) {
                 </h2>
               </div>
               <ul
-                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[80px]`}
+                ref={nodeRefExperienceUl}
+                className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[10px]`}
+                onMouseEnter={handleExperienceListEnter}
+                onMouseLeave={handleExperienceListLeave}
               >
                 {experiences.map((experience) => (
                   <Experience
@@ -359,6 +390,7 @@ export default function Portfolio({ loadingState }) {
                     dates={experience.dates}
                     roleCompany={experience.roleCompany}
                     jobDescription={experience.jobDescription}
+                    nodeRefExperienceSection={nodeRefExperienceSection}
                   />
                 ))}
               </ul>

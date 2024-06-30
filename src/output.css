@@ -606,8 +606,8 @@ video {
   margin-top: 1rem;
 }
 
-.mt-\[100px\] {
-  margin-top: 100px;
+.mt-\[120px\] {
+  margin-top: 120px;
 }
 
 .mt-auto {
@@ -756,8 +756,8 @@ video {
   gap: 1.5rem;
 }
 
-.gap-\[80px\] {
-  gap: 80px;
+.gap-\[10px\] {
+  gap: 10px;
 }
 
 .overflow-y-auto {
@@ -793,6 +793,10 @@ video {
 .bg-globalBackground {
   --tw-bg-opacity: 1;
   background-color: rgb(20 20 20 / var(--tw-bg-opacity));
+}
+
+.p-\[20px\] {
+  padding: 20px;
 }
 
 .pb-2 {
@@ -907,6 +911,10 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .transition-all {
@@ -1160,10 +1168,6 @@ nav li:hover > div {
   transform: translateY(0px);
 }
 
-.connect a {
-  opacity: 0.6;
-}
-
 .connect {
   opacity: 0;
   transition:
@@ -1230,6 +1234,14 @@ section > .section-content {
   border-left: 0.5px solid transparent;
 }
 
+section#projects > .section-content {
+  padding-left: 30px;
+}
+
+section#experience > .section-content {
+  padding-left: 30px;
+}
+
 section > .section-content.show-border {
   opacity: 1;
   transition: all 0.4s ease-in-out;
@@ -1252,18 +1264,24 @@ section.fade > .section-content > .shadow-div {
   box-shadow: none;
 }
 
+.focus {
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(27, 39, 60, 0.4);
+  border-radius: 5px;
+  box-shadow: 0px -1px 0px 0px rgba(125, 125, 129, 0.2);
+}
+
+.unfocus {
+  opacity: 0.3;
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
 
-.hover\:text-greenLight:hover {
+.hover\:text-green:hover {
   --tw-text-opacity: 1;
-  color: rgb(168 240 194 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
 .hover\:no-underline:hover {
@@ -1292,6 +1310,11 @@ section.fade > .section-content > .shadow-div {
 .group:hover .group-hover\:text-green {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:hover\:text-greenLight:hover {
+  --tw-text-opacity: 1;
+  color: rgb(168 240 194 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1150px) {

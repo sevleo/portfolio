@@ -114,7 +114,7 @@ export const useMainProjects = () => {
       imgSrc: novavistacafe,
       projectName: "Nova Vista Cafe",
       projectDescription:
-        "Playing with CSS to implement an interesting paralax effect with the background image. A nice little project intended to learn some CSS tricks.",
+        "Playing with CSS to implement an interesting paralax effect with the background image. A nice little project for learning some CSS tricks.",
       technologies: ["JavaScript", "CSS", "HTML"],
     },
     {
