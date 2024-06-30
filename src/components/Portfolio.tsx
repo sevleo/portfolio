@@ -12,6 +12,7 @@ import {
 } from "./hooks/useNodes";
 import { useMainProjects } from "./hooks/useProjects";
 import { useExperiences } from "./hooks/useExperiences";
+import resume from "../assets/SevaLeoCV.pdf";
 
 import {
   useHandleMouseEnterSection,
@@ -400,6 +401,30 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
                   />
                 ))}
               </ul>
+              <a
+                href={resume}
+                download="Seva Leo Resume.pdf"
+                className="hover:text-green group text-end text-base font-[600] text-white hover:cursor-pointer"
+              >
+                <p className="pt-6 text-end">
+                  Download Full Résumé{" "}
+                  <span className="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover:translate-x-[3px] group-hover:translate-y-[-3px]"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </p>
+              </a>
             </section>
           </CSSTransition>
         </div>

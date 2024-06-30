@@ -847,6 +847,14 @@ video {
   padding-top: 5px;
 }
 
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-start {
   text-align: start;
 }
@@ -890,6 +898,18 @@ video {
   font-weight: 500;
 }
 
+.font-\[500\] {
+  font-weight: 500;
+}
+
+.font-\[900\] {
+  font-weight: 900;
+}
+
+.font-\[100\] {
+  font-weight: 100;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -907,6 +927,11 @@ video {
 .text-whiteDimmed {
   --tw-text-opacity: 1;
   color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
