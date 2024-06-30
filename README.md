@@ -1,12 +1,12 @@
-<h3 align="center">sevaleo.netlify.com</h3>
+<h3 align="center">sevaleo.netlify.app</h3>
 
 ##
 
-<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I have experience working with. Built with React, hosted on Netlify. The website can be accessed <a href="https://heroic-horse-859bac.netlify.app/">here</a>.</p>
+<p align="center">This is my portfolio website featuring the projects, work experience, and technologies that I have experience working with. Built with React, hosted on Netlify. The website can be accessed <a href="https://sevaleo.netlify.app/">here</a>.</p>
 
 <!-- ABOUT THE PROJECT -->
 
-[![Product Name Screen Shot][product-screenshot]](https://yogato.netlify.app)
+[![Product Name Screen Shot][product-screenshot]](https://sevaleo.netlify.app)
 
 <!-- USAGE EXAMPLES -->
 
