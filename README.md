@@ -1,39 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-
-<h3 align="center">Seva Leo Portfolio</h3>
-
-  <p align="center">
-    Open source Yoga Sequence Builder
-    <br />
-    <a href="https://yogato.netlify.app">View Site</a>
-    ·
-    <a href="https://github.com/sevleo/Portfolio/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-  </p>
-</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#main-technologies">Main technologies</a></li>
-        <li><a href="#hosting">Hosting</a></li>
-        <li><a href="#other-notable-libraries-and-toolkits">Other notable libraries & toolkits</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-
-  </ol>
+This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with.
 </details>
 
 <!-- ABOUT THE PROJECT -->
