@@ -46,4 +46,4 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Acknowledgements
 
-While all the code is of my authorship, design solutions are inspired by <a href="brittanychiang.com">brittanychiang.com</a>.
+While all the code is of my authorship, design solutions are inspired by <a href="https://brittanychiang.com">brittanychiang.com</a>.
