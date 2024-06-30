@@ -2,6 +2,8 @@
 
 This is my portfolio website featuring the projects, work experience, and technologies that I'm equipped with. I created this website with React and TailwindCSS, and hosted on Netlify.
 
+The website is accessed by this link: [Seva Leo Portfolio](https://heroic-horse-859bac.netlify.app/).
+
 <!-- ABOUT THE PROJECT -->
 
 [![Product Name Screen Shot][product-screenshot]](https://yogato.netlify.app)
