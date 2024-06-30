@@ -15,7 +15,7 @@ export const useExperiences = () => {
     },
     {
       dates: "MAR 2022 — JUN 2023",
-      roleCompany: "Solution Architect · Customertimes Latvia",
+      roleCompany: "Solution Architect · Customertimes USA",
       jobDescription: [
         "I designed and implemented a versatile litigation support platform, focusing on cost-efficiency and customization. Collaborated closely with stakeholders and SMEs to thoroughly understand client requirements and business models.",
         "My responsibilities included creating modular solutions, managing stakeholder expectations, prioritizing backlog items, and overseeing business analysts. I also authored and validated user stories to ensure alignment with project objectives.",
@@ -23,7 +23,7 @@ export const useExperiences = () => {
     },
     {
       dates: "JUL 2021 — MAR 2022",
-      roleCompany: "Solution Architect · Customertimes USA",
+      roleCompany: "Solution Architect · Customertimes Latvia",
       jobDescription: [
         "I successfully implemented Sales Cloud solutions, overseeing organization merges and migrations. My role involved analyzing databases and current configurations, mapping business processes to streamline operations, and identifying areas for improvement. ",
         "I executed data migrations and refined business processes to enhance efficiency. Additionally, I conducted comprehensive user training sessions to ensure seamless adoption of new systems.",
