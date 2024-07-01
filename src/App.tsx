@@ -50,7 +50,7 @@ function App() {
   return (
     <>
       {/* Main router */}
-      <div className="relative flex h-full w-full items-center justify-center">
+      <div className="relative flex w-full items-center justify-center min-[1000px]:h-full">
         <RouterProvider router={router} />
       </div>
 

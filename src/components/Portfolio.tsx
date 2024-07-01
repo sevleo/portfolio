@@ -172,9 +172,9 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
   return (
     <>
       <div
-        className={`fixed left-0 top-0 z-[101] flex h-full w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-28 pr-28 pt-[100px] min-[1000px]:flex-row`}
+        className={`left-0 top-0 z-[101] flex w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-28 pr-28 pt-[100px] min-[1000px]:fixed min-[1000px]:h-full min-[1000px]:flex-row`}
       >
-        <header className="sticky top-0 flex max-h-[800px] w-1/3 min-w-[350px] max-w-[500px] flex-shrink-0 flex-col">
+        <header className="flex max-h-[800px] w-1/3 min-w-[350px] max-w-[500px] flex-shrink-0 flex-col min-[1000px]:sticky min-[1000px]:top-0">
           <TransitionGroup component={null}>
             {loadingState === "loading-complete" &&
               items1.map((item, i) => {
@@ -198,7 +198,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               })}
           </TransitionGroup>
 
-          <div>
+          <div className="hidden min-[1000px]:block">
             <CSSTransition
               in={aboutComplete}
               timeout={500}
@@ -217,7 +217,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               </div>
             </CSSTransition>
           </div>
-          <div className="mb-20 mt-auto flex flex-col items-start gap-2 pb-[10px]">
+          <div className="mb-20 mt-auto flex flex-col items-start gap-2 pb-[10px] pt-10">
             <ul className="flex gap-5">
               {items4.map((item, i) => {
                 return (
@@ -257,11 +257,9 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             </CSSTransition>
           </div>
         </header>
-        <div className="relative mb-20 h-fit w-2/3 max-w-[550px] flex-shrink">
+        <div className="relative mb-20 h-fit flex-shrink min-[1000px]:w-2/3 min-[1000px]:max-w-[550px]">
           <section className="" id="about" ref={nodeRefAboutSection}>
-            <h2 id="about-h2" className="absolute top-[-100px] h-0 opacity-0">
-              About
-            </h2>
+            <SectionHeader id="about-h2" text="About" />
             <div
               className={`section-content relative ${showBorder ? "show-border" : ""} `}
             >
@@ -292,14 +290,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             ref={nodeRefTechnologiesSection}
             className="relative mt-[120px]"
           >
-            <div>
-              <h2
-                id="technologies-h2"
-                className="absolute top-[-100px] h-0 opacity-0"
-              >
-                Technologies
-              </h2>
-            </div>
+            <SectionHeader id="technologies-h2" text="Technologies" />
             <div
               className={`section-content relative flex flex-wrap justify-start gap-1 ${showBorder ? "show-border" : ""}`}
             >
@@ -337,14 +328,8 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               className={`projects-section relative mt-[120px]`}
               style={{ transitionDelay: `${500}ms` }}
             >
-              <div>
-                <h2
-                  id="projects-h2"
-                  className="absolute top-[-100px] h-0 opacity-0"
-                >
-                  Projects
-                </h2>
-              </div>
+              <SectionHeader id="projects-h2" text="Projects" />
+
               <ul
                 ref={nodeRefProjectsUl}
                 className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[10px]`}
@@ -377,14 +362,8 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               className={`experience-section relative mt-[120px]`}
               style={{ transitionDelay: `${1000}ms` }}
             >
-              <div>
-                <h2
-                  id="experience-h2"
-                  className="absolute top-[-100px] h-0 opacity-0"
-                >
-                  Experience
-                </h2>
-              </div>
+              <SectionHeader id="experience-h2" text="Experience" />
+
               <ul
                 ref={nodeRefExperienceUl}
                 className={`section-content relative ${showBorder ? "show-border" : ""} flex flex-col gap-[10px]`}
@@ -430,5 +409,21 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
         </div>
       </div>
     </>
+  );
+}
+
+interface SectionHeaderProps {
+  id: string;
+  text: string;
+}
+
+function SectionHeader({ id, text }: SectionHeaderProps) {
+  return (
+    <h2
+      id={id}
+      className="text-start min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:opacity-0"
+    >
+      {text}
+    </h2>
   );
 }

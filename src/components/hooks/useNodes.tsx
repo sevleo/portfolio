@@ -19,7 +19,7 @@ export const useIntroNodes = () => {
 
   const three = useMemo(
     () => (
-      <p className="mt-4 w-[300px] text-start">
+      <p className="text-whiteDimmed mt-4 w-[300px] text-start">
         I'm a full-stack software developer specializing on building websites
         with React and NodesJS.
       </p>
