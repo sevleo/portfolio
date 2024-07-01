@@ -145,7 +145,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
 
       setTimeout(() => {
         setShowBorder(true);
-      }, 1000);
+      }, 1300);
     }
   };
 
