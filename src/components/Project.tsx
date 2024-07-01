@@ -47,16 +47,16 @@ export default function Project({
   return (
     <li
       ref={projectRef}
-      className="group relative flex gap-6 p-[20px] transition-all hover:cursor-pointer"
+      className="group relative flex gap-6 p-[20px] pr-[0px] transition-all hover:cursor-pointer"
       onClick={handleProjectClick}
       onMouseEnter={handleProjectEnter}
       onMouseLeave={handleProjectLeave}
     >
-      <div className="w-[180px] rounded-md">
+      <div className="w-[150px] rounded-md">
         <img
           src={imgSrc}
           alt=""
-          className="group-hover:border-imgBorderHover border-imgBorder h-[auto] min-w-[180px] max-w-full rounded-md border-[2px] transition-all"
+          className="group-hover:border-imgBorderHover border-imgBorder h-[auto] min-w-[150px] max-w-full rounded-md border-[2px] transition-all"
         />
       </div>
       <div className="flex flex-col">

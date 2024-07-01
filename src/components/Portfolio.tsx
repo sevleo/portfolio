@@ -172,9 +172,9 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
   return (
     <>
       <div
-        className={`fixed left-0 top-0 z-[101] flex h-full w-full justify-center overflow-y-auto overflow-x-hidden pl-28 pr-28 pt-[100px]`}
+        className={`fixed left-0 top-0 z-[101] flex h-full w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-28 pr-28 pt-[100px] min-[1000px]:flex-row`}
       >
-        <header className="sticky top-0 flex max-h-[800px] w-1/2 max-w-[500px] flex-col">
+        <header className="sticky top-0 flex max-h-[800px] w-1/3 min-w-[350px] max-w-[500px] flex-shrink-0 flex-col">
           <TransitionGroup component={null}>
             {loadingState === "loading-complete" &&
               items1.map((item, i) => {
@@ -257,7 +257,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             </CSSTransition>
           </div>
         </header>
-        <div className="relative mb-20 h-fit w-1/2 max-w-[550px]">
+        <div className="relative mb-20 h-fit w-2/3 max-w-[550px] flex-shrink">
           <section className="" id="about" ref={nodeRefAboutSection}>
             <h2 id="about-h2" className="absolute top-[-100px] h-0 opacity-0">
               About

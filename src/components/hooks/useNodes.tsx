@@ -19,11 +19,9 @@ export const useIntroNodes = () => {
 
   const three = useMemo(
     () => (
-      <p className="mt-4 w-[70%] text-start">
-        I'm a full-stack software developer specializing on building{" "}
-        <span className="text-green-500">fast </span>
-        and <span className="text-green-500">responsive </span> websites with
-        React and NodesJS.
+      <p className="mt-4 w-[300px] text-start">
+        I'm a full-stack software developer specializing on building websites
+        with React and NodesJS.
       </p>
     ),
     []

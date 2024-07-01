@@ -84,11 +84,11 @@ export default function Experience({
   return (
     <li
       ref={experienceRef}
-      className="group relative flex gap-6 p-[20px] transition-all"
+      className="group relative flex gap-6 p-[20px] pr-[0px] transition-all"
       onMouseEnter={handleExperienceEnter}
       onMouseLeave={handleExperienceLeave}
     >
-      <div className="min-w-[180px]">
+      <div className="min-w-[150px]">
         <p className={`text-whiteDimmed text-end text-sm`}>{dates}</p>
       </div>
       <div className="flex flex-col">
