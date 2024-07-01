@@ -839,6 +839,34 @@ video {
   padding-top: 5px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
+}
+
 .text-start {
   text-align: start;
 }
@@ -872,6 +900,19 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-\[600\] {
@@ -1319,6 +1360,24 @@ nav li:hover > div {
   color: rgb(168 240 194 / var(--tw-text-opacity));
 }
 
+@media (min-width: 800px) {
+  .min-\[800px\]\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .min-\[800px\]\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .min-\[800px\]\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .min-\[800px\]\:pr-20 {
+    padding-right: 5rem;
+  }
+}
+
 @media (min-width: 1000px) {
   .min-\[1000px\]\:fixed {
     position: fixed;
@@ -1362,6 +1421,22 @@ nav li:hover > div {
 
   .min-\[1000px\]\:flex-row {
     flex-direction: row;
+  }
+
+  .min-\[1000px\]\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .min-\[1000px\]\:pl-28 {
+    padding-left: 7rem;
+  }
+
+  .min-\[1000px\]\:pr-28 {
+    padding-right: 7rem;
+  }
+
+  .min-\[1000px\]\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .min-\[1000px\]\:opacity-0 {

@@ -172,7 +172,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
   return (
     <>
       <div
-        className={`left-0 top-0 z-[101] flex w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-28 pr-28 pt-[100px] min-[1000px]:fixed min-[1000px]:h-full min-[1000px]:flex-row`}
+        className={`min-[800px]:pr-2- left-0 top-0 z-[101] flex w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-6 pr-6 pt-[100px] min-[800px]:pl-20 min-[800px]:pr-20 min-[1000px]:fixed min-[1000px]:h-full min-[1000px]:flex-row min-[1000px]:pl-28 min-[1000px]:pr-28`}
       >
         <header className="flex max-h-[800px] w-1/3 min-w-[350px] max-w-[500px] flex-shrink-0 flex-col min-[1000px]:sticky min-[1000px]:top-0">
           <TransitionGroup component={null}>
@@ -421,7 +421,7 @@ function SectionHeader({ id, text }: SectionHeaderProps) {
   return (
     <h2
       id={id}
-      className="text-start min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:opacity-0"
+      className="pb-10 text-start text-[20px] min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:pb-0 min-[1000px]:text-[16px] min-[1000px]:opacity-0"
     >
       {text}
     </h2>
