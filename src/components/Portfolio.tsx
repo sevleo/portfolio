@@ -172,7 +172,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
   return (
     <>
       <div
-        className={`min-[800px]:pr-2- left-0 top-0 z-[101] flex w-full flex-col justify-center overflow-y-auto overflow-x-hidden pl-6 pr-6 pt-[100px] min-[800px]:pl-20 min-[800px]:pr-20 min-[1000px]:fixed min-[1000px]:h-full min-[1000px]:flex-row min-[1000px]:pl-28 min-[1000px]:pr-28`}
+        className={`min-[800px]:pr-2- left-0 top-0 z-[101] flex w-full flex-col justify-center overflow-x-hidden overflow-y-hidden pl-6 pr-6 pt-[100px] min-[800px]:pl-20 min-[800px]:pr-20 min-[1000px]:fixed min-[1000px]:h-full min-[1000px]:flex-row min-[1000px]:overflow-y-auto min-[1000px]:pl-28 min-[1000px]:pr-28`}
       >
         <header className="flex max-h-[800px] w-1/3 min-w-[350px] max-w-[500px] flex-shrink-0 flex-col min-[1000px]:sticky min-[1000px]:top-0">
           <TransitionGroup component={null}>
@@ -259,7 +259,11 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
         </header>
         <div className="relative mb-20 h-fit flex-shrink min-[1000px]:w-2/3 min-[1000px]:max-w-[550px]">
           <section className="" id="about" ref={nodeRefAboutSection}>
-            <SectionHeader id="about-h2" text="About" />
+            <SectionHeader
+              id="about-h2"
+              text="About"
+              techComplete={techComplete}
+            />
             <div
               className={`section-content relative ${showBorder ? "show-border" : ""} `}
             >
@@ -290,7 +294,11 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             ref={nodeRefTechnologiesSection}
             className="relative mt-[120px]"
           >
-            <SectionHeader id="technologies-h2" text="Technologies" />
+            <SectionHeader
+              id="technologies-h2"
+              text="Technologies"
+              techComplete={techComplete}
+            />
             <div
               className={`section-content relative flex flex-wrap justify-start gap-1 ${showBorder ? "show-border" : ""}`}
             >
@@ -328,7 +336,11 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               className={`projects-section relative mt-[120px]`}
               style={{ transitionDelay: `${500}ms` }}
             >
-              <SectionHeader id="projects-h2" text="Projects" />
+              <SectionHeader
+                id="projects-h2"
+                text="Projects"
+                techComplete={techComplete}
+              />
 
               <ul
                 ref={nodeRefProjectsUl}
@@ -362,7 +374,11 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               className={`experience-section relative mt-[120px]`}
               style={{ transitionDelay: `${1000}ms` }}
             >
-              <SectionHeader id="experience-h2" text="Experience" />
+              <SectionHeader
+                id="experience-h2"
+                text="Experience"
+                techComplete={techComplete}
+              />
 
               <ul
                 ref={nodeRefExperienceUl}
@@ -415,13 +431,14 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
 interface SectionHeaderProps {
   id: string;
   text: string;
+  techComplete: boolean;
 }
 
-function SectionHeader({ id, text }: SectionHeaderProps) {
+function SectionHeader({ id, text, techComplete }: SectionHeaderProps) {
   return (
     <h2
       id={id}
-      className="pb-10 text-start text-[20px] min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:pb-0 min-[1000px]:text-[16px] min-[1000px]:opacity-0"
+      className={` ${techComplete ? "opacity-100" : "opacity-0"} pb-10 text-start text-[20px] transition-all min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:pb-0 min-[1000px]:text-[16px] min-[1000px]:opacity-0`}
     >
       {text}
     </h2>

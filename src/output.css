@@ -558,6 +558,10 @@ video {
   visibility: visible;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -754,6 +758,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .rounded-full {
@@ -957,6 +965,10 @@ video {
 
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .transition-all {
@@ -1421,6 +1433,10 @@ nav li:hover > div {
 
   .min-\[1000px\]\:flex-row {
     flex-direction: row;
+  }
+
+  .min-\[1000px\]\:overflow-y-auto {
+    overflow-y: auto;
   }
 
   .min-\[1000px\]\:pb-0 {
