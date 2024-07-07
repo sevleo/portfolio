@@ -84,13 +84,13 @@ export default function Experience({
   return (
     <li
       ref={experienceRef}
-      className="group relative flex flex-col gap-2 p-[20px] pr-[0px] transition-all min-[600px]:flex-row min-[600px]:gap-6"
+      className="group relative flex flex-col gap-2 p-[20px] pr-[0px] transition-all min-[500px]:flex-row min-[500px]:gap-6"
       onMouseEnter={handleExperienceEnter}
       onMouseLeave={handleExperienceLeave}
     >
       <div className="min-w-[150px]">
         <p
-          className={`text-start text-sm text-whiteDimmed opacity-60 min-[600px]:text-end`}
+          className={`text-start text-sm text-whiteDimmed opacity-60 min-[500px]:text-end`}
         >
           {dates}
         </p>

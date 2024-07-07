@@ -334,7 +334,7 @@ nav li:hover > div {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .focus {
     transition: all 0.2s ease-in-out;
     background-color: rgba(27, 39, 60, 0.4);

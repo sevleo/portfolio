@@ -554,14 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.pointer-events-none {
-  pointer-events: none;
-}
-
-.pointer-events-auto {
-  pointer-events: auto;
-}
-
 .visible {
   visibility: visible;
 }
@@ -685,6 +677,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .min-w-\[150px\] {
@@ -1298,7 +1294,7 @@ nav li:hover > div {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .focus {
     transition: all 0.2s ease-in-out;
     background-color: rgba(27, 39, 60, 0.4);
@@ -1363,17 +1359,45 @@ nav li:hover > div {
   color: rgb(168 240 194 / var(--tw-text-opacity));
 }
 
-@media (min-width: 60px) {
-  .min-\[60px\]\:pointer-events-auto {
-    pointer-events: auto;
+@media (min-width: 500px) {
+  .min-\[500px\]\:order-1 {
+    order: 1;
+  }
+
+  .min-\[500px\]\:order-2 {
+    order: 2;
+  }
+
+  .min-\[500px\]\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .min-\[500px\]\:w-\[150px\] {
+    width: 150px;
+  }
+
+  .min-\[500px\]\:min-w-\[150px\] {
+    min-width: 150px;
+  }
+
+  .min-\[500px\]\:flex-row {
+    flex-direction: row;
+  }
+
+  .min-\[500px\]\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .min-\[500px\]\:text-end {
+    text-align: end;
+  }
+
+  .min-\[500px\]\:hover\:cursor-pointer:hover {
+    cursor: pointer;
   }
 }
 
 @media (min-width: 600px) {
-  .min-\[600px\]\:pointer-events-auto {
-    pointer-events: auto;
-  }
-
   .min-\[600px\]\:order-1 {
     order: 1;
   }
@@ -1388,14 +1412,6 @@ nav li:hover > div {
 
   .min-\[600px\]\:flex-row {
     flex-direction: row;
-  }
-
-  .min-\[600px\]\:gap-6 {
-    gap: 1.5rem;
-  }
-
-  .min-\[600px\]\:text-end {
-    text-align: end;
   }
 
   .min-\[600px\]\:hover\:cursor-pointer:hover {

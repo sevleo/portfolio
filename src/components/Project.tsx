@@ -52,19 +52,19 @@ export default function Project({
   return (
     <li
       ref={projectRef}
-      className="group relative mb-6 flex flex-col gap-6 p-[20px] pr-[0px] transition-all min-[600px]:mb-0 min-[600px]:flex-row min-[600px]:hover:cursor-pointer"
+      className="group relative mb-6 flex flex-col gap-6 p-[20px] pr-[0px] transition-all min-[500px]:mb-0 min-[500px]:flex-row min-[500px]:hover:cursor-pointer"
       onClick={() => handleProjectClick("")}
       onMouseEnter={handleProjectEnter}
       onMouseLeave={handleProjectLeave}
     >
-      <div className="order-2 w-[150px] rounded-md min-[600px]:order-1">
+      <div className="order-2 w-[250px] rounded-md min-[500px]:order-1 min-[500px]:w-[150px]">
         <img
           src={imgSrc}
           alt=""
-          className="h-[auto] min-w-[150px] max-w-full rounded-md border-[2px] border-imgBorder transition-all group-hover:border-imgBorderHover"
+          className="h-[auto] w-[250px] max-w-full rounded-md border-[2px] border-imgBorder transition-all group-hover:border-imgBorderHover min-[500px]:min-w-[150px]"
         />
       </div>
-      <div className="order-1 flex flex-col min-[600px]:order-2">
+      <div className="order-1 flex flex-col min-[500px]:order-2">
         <p
           onClick={() => handleProjectClick("force")}
           className="group-hover:text-green-500 text-start text-base font-[600] leading-none transition-all hover:cursor-pointer group-hover:text-green"
