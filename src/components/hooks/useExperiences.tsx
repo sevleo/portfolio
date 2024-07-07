@@ -2,7 +2,7 @@ export const useExperiences = () => {
   const experiences = [
     {
       dates: "FEB 2024 — APR 2024",
-      roleCompany: "YoGato Project",
+      roleCompany: "Full-stack Developer · YoGato Project",
       jobDescription: [
         "Developed YoGato, a full-stack application for a local yoga studio, which went live in March 2024",
         "- Frontend: Created with React & TailwindCSS",
