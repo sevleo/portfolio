@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 export const useIntroNodes = () => {
   const one = useMemo(
-    () => <p className={`text-green pb-2 text-start`}>Hi, my name is</p>,
+    () => <p className={`pb-2 text-start text-green`}>Hi, my name is</p>,
     []
   );
 
@@ -19,7 +19,7 @@ export const useIntroNodes = () => {
 
   const three = useMemo(
     () => (
-      <p className="text-whiteDimmed mt-4 w-[300px] text-start">
+      <p className="mt-4 w-[300px] text-start text-whiteDimmed">
         I'm a full-stack software developer specializing on building websites
         with React and NodesJS.
       </p>
@@ -33,7 +33,7 @@ export const useIntroNodes = () => {
 export const useAboutNodes = () => {
   const four = useMemo(
     () => (
-      <p className="text-whiteDimmed pb-2 text-start">
+      <p className="pb-2 text-start text-whiteDimmed">
         Back in 2014, out of curiosity, I opened a Java tutorial. A year later,
         I found employment at a consulting firm, working on Salesforce projects
         as a Salesforce Developer.
@@ -44,7 +44,7 @@ export const useAboutNodes = () => {
 
   const five = useMemo(
     () => (
-      <p className="text-whiteDimmed pb-2 text-start">
+      <p className="pb-2 text-start text-whiteDimmed">
         Each time I stayed on a project for a while, I mastered its intricacies.
         I developed an intuitive sense for what's going on in the system and
         naturally took control of the system's overall dynamics. This
@@ -57,7 +57,7 @@ export const useAboutNodes = () => {
 
   const six = useMemo(
     () => (
-      <p className="text-whiteDimmed pb-2 text-start">
+      <p className="pb-2 text-start text-whiteDimmed">
         As time went on, I found myself spending more time in the business realm
         and less in the technical realm. This shift rekindled my passion for
         programming. At the beginning of 2023, I decided to take a career break
@@ -70,7 +70,7 @@ export const useAboutNodes = () => {
 
   const seven = useMemo(
     () => (
-      <p className="text-whiteDimmed text-start">
+      <p className="text-start text-whiteDimmed">
         Now, I enjoy creating full-stack applications, finding satisfaction in
         producing high-quality, reliable, and aesthetically pleasing code.
       </p>
@@ -226,6 +226,25 @@ export const useTechNodes = () => {
     ),
     []
   );
+  const tech17 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/mysql-20232A?style=for-the-badge&logo=mysql"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech18 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/expressjs-20232A?logo=express&style=for-the-badge"
+        alt=""
+      />
+    ),
+    []
+  );
 
   return useMemo(
     () => [
@@ -235,6 +254,7 @@ export const useTechNodes = () => {
       tech4,
       tech5,
       tech6,
+      tech17,
       tech7,
       tech8,
       tech9,
@@ -242,6 +262,7 @@ export const useTechNodes = () => {
       tech11,
       tech12,
       tech13,
+      tech18,
       tech14,
       tech15,
       tech16,
@@ -263,6 +284,8 @@ export const useTechNodes = () => {
       tech14,
       tech15,
       tech16,
+      tech17,
+      tech18,
     ]
   );
 };
@@ -272,7 +295,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://github.com/sevleo"
-        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
+        className="text-whiteDimmed opacity-60 hover:text-green hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -293,7 +316,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://www.linkedin.com/in/seva-leo-733b09114/"
-        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
+        className="text-whiteDimmed opacity-60 hover:text-green hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -314,7 +337,7 @@ export const useConnectNodes = () => {
     () => (
       <a
         href="https://www.instagram.com/seva_leo/"
-        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
+        className="text-whiteDimmed opacity-60 hover:text-green hover:opacity-100"
         target="_blank"
       >
         <svg
@@ -336,7 +359,7 @@ export const useConnectNodes = () => {
       <a
         href="https://t.me/sevaleo"
         target="_blank"
-        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
+        className="text-whiteDimmed opacity-60 hover:text-green hover:opacity-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +382,7 @@ export const useConnectNodes = () => {
       <a
         href="https://leetcode.com/u/sevaleo/"
         target="_blank"
-        className="hover:text-green text-whiteDimmed opacity-60 hover:opacity-100"
+        className="text-whiteDimmed opacity-60 hover:text-green hover:opacity-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
