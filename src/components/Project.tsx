@@ -21,8 +21,13 @@ export default function Project({
   projectTechnologies,
   nodeRefProjectsSection,
 }: ProjectProps) {
-  const handleProjectClick = () => {
-    window.open(link, "_blank");
+  const handleProjectClick = (force: string) => {
+    if (window.innerWidth > 600 && force) {
+      return;
+    }
+    if (window.innerWidth > 600 || force) {
+      window.open(link, "_blank");
+    }
   };
 
   const projectRef = useRef(null);
@@ -47,20 +52,23 @@ export default function Project({
   return (
     <li
       ref={projectRef}
-      className="group relative flex gap-6 p-[20px] pr-[0px] transition-all hover:cursor-pointer"
-      onClick={handleProjectClick}
+      className="group relative mb-6 flex flex-col gap-6 p-[20px] pr-[0px] transition-all min-[600px]:mb-0 min-[600px]:flex-row min-[600px]:hover:cursor-pointer"
+      onClick={() => handleProjectClick("")}
       onMouseEnter={handleProjectEnter}
       onMouseLeave={handleProjectLeave}
     >
-      <div className="w-[150px] rounded-md">
+      <div className="order-2 w-[150px] rounded-md min-[600px]:order-1">
         <img
           src={imgSrc}
           alt=""
-          className="group-hover:border-imgBorderHover border-imgBorder h-[auto] min-w-[150px] max-w-full rounded-md border-[2px] transition-all"
+          className="h-[auto] min-w-[150px] max-w-full rounded-md border-[2px] border-imgBorder transition-all group-hover:border-imgBorderHover"
         />
       </div>
-      <div className="flex flex-col">
-        <p className="group-hover:text-green text-start text-base font-[600] leading-none transition-all group-hover:text-green-500">
+      <div className="order-1 flex flex-col min-[600px]:order-2">
+        <p
+          onClick={() => handleProjectClick("force")}
+          className="group-hover:text-green-500 text-start text-base font-[600] leading-none transition-all hover:cursor-pointer group-hover:text-green"
+        >
           {projectName}
           <span className="">
             <svg
@@ -79,7 +87,7 @@ export default function Project({
           </span>
         </p>
         <div className="mt-3">
-          <p className="text-whiteDimmed text-start text-sm opacity-100">
+          <p className="text-start text-sm text-whiteDimmed opacity-100">
             {projectDescription}
           </p>
         </div>
@@ -87,7 +95,7 @@ export default function Project({
           {projectTechnologies.map((tech) => (
             <div
               key={tech}
-              className="text-greenLight bg-darkGreen rounded-full pb-[5px] pl-[10px] pr-[10px] pt-[5px] text-xs font-medium"
+              className="rounded-full bg-darkGreen pb-[5px] pl-[10px] pr-[10px] pt-[5px] text-xs font-medium text-greenLight"
             >
               {tech}
             </div>

@@ -52,7 +52,7 @@ export default function Experience({
             key={index}
             href={linkMap[cleanWord as keyof LinkMapProps]}
             target="_blank"
-            className="group-hover:text-green group-hover:hover:text-greenLight underline opacity-100 hover:no-underline"
+            className="underline opacity-100 hover:no-underline group-hover:text-green group-hover:hover:text-greenLight"
           >
             <span>{word} </span>
           </a>
@@ -84,20 +84,24 @@ export default function Experience({
   return (
     <li
       ref={experienceRef}
-      className="group relative flex gap-6 p-[20px] pr-[0px] transition-all"
+      className="group relative flex flex-col gap-2 p-[20px] pr-[0px] transition-all min-[600px]:flex-row min-[600px]:gap-6"
       onMouseEnter={handleExperienceEnter}
       onMouseLeave={handleExperienceLeave}
     >
       <div className="min-w-[150px]">
-        <p className={`text-whiteDimmed text-end text-sm`}>{dates}</p>
+        <p
+          className={`text-start text-sm text-whiteDimmed opacity-60 min-[600px]:text-end`}
+        >
+          {dates}
+        </p>
       </div>
       <div className="flex flex-col">
-        <p className="group-hover:text-green text-start text-base font-[600] leading-none transition-all">
+        <p className="text-start text-base font-[600] leading-none transition-all group-hover:text-green">
           {roleCompany}
         </p>
         <div className="mt-3 flex flex-col gap-2">
           {jobDescription.map((description, index) => (
-            <p key={index} className="text-whiteDimmed text-start text-sm">
+            <p key={index} className="text-start text-sm text-whiteDimmed">
               {createLinkedDescription(description)}
             </p>
           ))}
