@@ -145,7 +145,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
 
       setTimeout(() => {
         setShowBorder(true);
-      }, 1300);
+      }, 1700);
     }
   };
 
@@ -223,7 +223,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
                 return (
                   <CSSTransition
                     key={i}
-                    in={techComplete}
+                    in={aboutComplete}
                     nodeRef={refs4.current[i]}
                     classNames="connect"
                     timeout={500}
@@ -248,7 +248,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             >
               <a
                 href="mailto:seva.leonov@hotmail.com"
-                className="connect text-whiteDimmed hover:text-green text-sm"
+                className="connect text-sm text-whiteDimmed hover:text-green"
                 ref={nodeRefEmail}
                 style={{ transitionDelay: `${1000}ms` }}
               >
@@ -262,7 +262,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
             <SectionHeader
               id="about-h2"
               text="About"
-              techComplete={techComplete}
+              techComplete={aboutComplete}
             />
             <div
               className={`section-content relative ${showBorder ? "show-border" : ""} `}
@@ -399,7 +399,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               <a
                 href={resume}
                 download="Seva Leo Resume.pdf"
-                className="hover:text-green group text-end text-base font-[600] text-white hover:cursor-pointer"
+                className="group text-end text-base font-[600] text-white hover:cursor-pointer hover:text-green"
               >
                 <p className="pt-6 text-end">
                   Download Full Résumé{" "}
@@ -438,7 +438,7 @@ function SectionHeader({ id, text, techComplete }: SectionHeaderProps) {
   return (
     <h2
       id={id}
-      className={` ${techComplete ? "opacity-100" : "opacity-0"} pb-10 text-start text-[20px] transition-all min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:pb-0 min-[1000px]:text-[16px] min-[1000px]:opacity-0`}
+      className={` ${techComplete ? "section-label-transition-complete opacity-100" : "section-label opacity-0"} pb-10 text-start text-[20px] transition-all min-[1000px]:absolute min-[1000px]:top-[-100px] min-[1000px]:h-0 min-[1000px]:pb-0 min-[1000px]:text-[16px] min-[1000px]:opacity-0`}
     >
       {text}
     </h2>
