@@ -3,7 +3,15 @@ export const useExperiences = () => {
     {
       dates: "FEB 2024 — APR 2024",
       roleCompany: "YoGato Project",
-      jobDescription: ["Created YoGato."],
+      jobDescription: [
+        "Developed YoGato, a full-stack application for a local yoga studio, which went live in March 2024",
+        "- Frontend: Created with React & TailwindCSS",
+        "- Backend: Developed using Node.js, Express.js, and Mongoose, with MongoDB as the database",
+        "- Implemented user authentication with both password and Google login strategies",
+        "- Implemented two verification methods: session-based with cookies and token-based with bearer-tokens",
+        "- Designed and integrated a custom precise timer with configurable animations and voice announcements",
+        "- Implemented drag-and-drop functionality with DND Kit library",
+      ],
     },
     {
       dates: "JUN 2023 — JAN 2024",
@@ -30,7 +38,7 @@ export const useExperiences = () => {
       ],
     },
     {
-      dates: "JAN 2020 — JUL 2021",
+      dates: "JAN 2019 — JUL 2021",
       roleCompany: "Salesforce Architect · CT Consulting",
       jobDescription: [
         "Led development of a clinical trial app for a large US pharmaceutical company. Worked closely with BAs to refine requirements and to design modular solutions.",
@@ -39,7 +47,7 @@ export const useExperiences = () => {
       ],
     },
     {
-      dates: "JAN 2016 — JAN 2020",
+      dates: "JAN 2016 — JAN 2019",
       roleCompany: "Salesforce Developer · CT Consulting",
       jobDescription: [
         "Developed CRM business logic inside the Salesforce ecosystem. Created forms, saved and extracted data from the database, created integration endpoints.",

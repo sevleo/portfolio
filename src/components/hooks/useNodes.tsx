@@ -34,9 +34,9 @@ export const useAboutNodes = () => {
   const four = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        Back in 2014, out of curiosity, I opened a Java tutorial. A year later,
-        I found employment at a consulting firm, working on Salesforce projects
-        as a Salesforce Developer.
+        With 9 years of IT experience, including 3 years as a software
+        developer, I began my career in 2014 at an international consulting
+        firm, focusing on Salesforce projects.
       </p>
     ),
     []
@@ -45,11 +45,10 @@ export const useAboutNodes = () => {
   const five = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        Each time I stayed on a project for a while, I mastered its intricacies.
-        I developed an intuitive sense for what's going on in the system and
-        naturally took control of the system's overall dynamics. This
-        progression led me to become a Solution Architect. For the next four
-        years, I thrived in this new role.
+        Over time, I mastered the intricacies of each project I joined, quickly
+        developing an intuitive grasp of system dynamics, which naturally led me
+        into an Architect role. In this role, I collaborated with other
+        developers and teams to design scalable solutions.
       </p>
     ),
     []
@@ -58,11 +57,10 @@ export const useAboutNodes = () => {
   const six = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        As time went on, I found myself spending more time in the business realm
-        and less in the technical realm. This shift rekindled my passion for
-        programming. At the beginning of 2023, I decided to take a career break
-        to update my knowledge of modern technologies and frameworks, aiming to
-        return to my roots as a programmer.
+        My career soon progressed into the business realm, where I transitioned
+        into a Solution Architect. After a few years, I yearned to return to
+        programming. I took a career break to update my knowledge of modern
+        technologies and frameworks.
       </p>
     ),
     []
