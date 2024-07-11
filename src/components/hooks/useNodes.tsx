@@ -244,11 +244,22 @@ export const useTechNodes = () => {
     []
   );
 
+  const tech19 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/vue.js-20232A?style=for-the-badge&logo=vue.js"
+        alt=""
+      />
+    ),
+    []
+  );
+
   return useMemo(
     () => [
       tech1,
       tech2,
       tech3,
+      tech19,
       tech4,
       tech5,
       tech6,
@@ -284,6 +295,7 @@ export const useTechNodes = () => {
       tech16,
       tech17,
       tech18,
+      tech19,
     ]
   );
 };
