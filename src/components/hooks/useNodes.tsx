@@ -200,7 +200,7 @@ export const useTechNodes = () => {
   const tech14 = useMemo(
     () => (
       <img
-        src="https://img.shields.io/badge/MongooseJs-20232A?style=for-the-badge&logo=MongooseJs"
+        src="https://img.shields.io/badge/Mongoose.js-20232A?style=for-the-badge&logo=Mongoose"
         alt=""
       />
     ),
@@ -209,7 +209,7 @@ export const useTechNodes = () => {
   const tech15 = useMemo(
     () => (
       <img
-        src="https://img.shields.io/badge/PassportJS-20232A?style=for-the-badge&logo=Passport"
+        src="https://img.shields.io/badge/Passport.js-20232A?style=for-the-badge&logo=Passport"
         alt=""
       />
     ),
@@ -237,7 +237,7 @@ export const useTechNodes = () => {
   const tech18 = useMemo(
     () => (
       <img
-        src="https://img.shields.io/badge/expressjs-20232A?logo=express&style=for-the-badge"
+        src="https://img.shields.io/badge/express-20232A?logo=express&style=for-the-badge"
         alt=""
       />
     ),
@@ -254,27 +254,38 @@ export const useTechNodes = () => {
     []
   );
 
+  const tech20 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Jest-20232A?style=for-the-badge&logo=Jest"
+        alt=""
+      />
+    ),
+    []
+  );
+
   return useMemo(
     () => [
-      tech1,
-      tech2,
-      tech3,
-      tech19,
-      tech4,
-      tech5,
-      tech6,
-      tech17,
-      tech7,
-      tech8,
-      tech9,
-      tech10,
-      tech11,
-      tech12,
-      tech13,
-      tech18,
-      tech14,
-      tech15,
-      tech16,
+      tech2, // typescript
+      tech1, // javascript
+      tech7, // html5
+      tech8, // css
+      tech3, // react
+      tech19, // vue
+      tech4, // node
+      tech5, // tailwind
+      tech18, // express
+      tech14, // mongoose
+      tech15, // passport
+      tech16, // datefns
+      tech13, // dndkit
+      tech20, // jest
+      tech9, // git
+      tech10, // npm
+      tech6, // mongodb
+      tech17, // mysql
+      tech11, // adaptable
+      tech12, // netlify
     ],
     [
       tech1,
@@ -296,6 +307,7 @@ export const useTechNodes = () => {
       tech17,
       tech18,
       tech19,
+      tech20,
     ]
   );
 };
