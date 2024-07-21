@@ -264,6 +264,26 @@ export const useTechNodes = () => {
     []
   );
 
+  const tech21 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/socket.io-20232A?style=for-the-badge&logo=socketdotio"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech22 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/WebSockets-20232A?style=for-the-badge&logo=websocket"
+        alt=""
+      />
+    ),
+    []
+  );
+
   return useMemo(
     () => [
       tech2, // typescript
@@ -272,11 +292,13 @@ export const useTechNodes = () => {
       tech8, // css
       tech3, // react
       tech19, // vue
-      tech4, // node
       tech5, // tailwind
+      tech4, // node
       tech18, // express
       tech14, // mongoose
       tech15, // passport
+      tech21, // socket.io
+      tech22, // websockets
       tech16, // datefns
       tech13, // dndkit
       tech20, // jest
@@ -308,6 +330,8 @@ export const useTechNodes = () => {
       tech18,
       tech19,
       tech20,
+      tech21,
+      tech22,
     ]
   );
 };
