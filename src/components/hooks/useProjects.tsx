@@ -7,6 +7,7 @@ import novatask from "../../assets/projectImages/novatask.png";
 import novavistacafe from "../../assets/projectImages/novavistacafe.png";
 import novavistadashboard from "../../assets/projectImages/novavistadashboard.png";
 import novavistafrom from "../../assets/projectImages/novavistaform.png";
+import pawnarena from "../../assets/projectImages/pawnarena.png";
 
 export const useProjects = () => {
   const projects = [
@@ -89,6 +90,22 @@ export const useProjects = () => {
 
 export const useMainProjects = () => {
   const projects = [
+    {
+      link: "https://pawn-arena.netlify.app/",
+      githublink: "https://github.com/sevleo/Pawn-Arena",
+      imgSrc: pawnarena,
+      projectName: "Pawn Arena",
+      projectDescription:
+        "A real-time online game. It combines gameplay simplicity with advanced networking to deliver seamless gameplay. Behind the scenes, it leverages sophisticated techniques like Client Prediction, Reconciliation, and Interpolation to ensure minimal latency and smooth player interactions, even in fast-paced environments.",
+      technologies: [
+        "Vue",
+        "NodeJS",
+        "TailwindCSS",
+        "TypeScript",
+        "WebSockets",
+        "Matter.js",
+      ],
+    },
     {
       link: "https://yogato.netlify.app",
       githublink: "https://github.com/sevleo/YoGato",

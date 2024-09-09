@@ -283,6 +283,15 @@ export const useTechNodes = () => {
     ),
     []
   );
+  const tech23 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Matter.js-20232A?style=for-the-badge"
+        alt=""
+      />
+    ),
+    []
+  );
 
   return useMemo(
     () => [
@@ -301,6 +310,7 @@ export const useTechNodes = () => {
       tech22, // websockets
       tech16, // datefns
       tech13, // dndkit
+      tech23, // matterjs
       tech20, // jest
       tech9, // git
       tech10, // npm
@@ -332,6 +342,7 @@ export const useTechNodes = () => {
       tech20,
       tech21,
       tech22,
+      tech23,
     ]
   );
 };
