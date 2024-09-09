@@ -113,7 +113,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
     ) {
       setTimeout(() => {
         setAboutComplete(true);
-      }, 200);
+      }, 50);
     }
   };
 
@@ -127,7 +127,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
     ) {
       setTimeout(() => {
         setTechComplete(true);
-      }, 200);
+      }, 50);
     }
   };
 
@@ -141,11 +141,11 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
     ) {
       setTimeout(() => {
         setConnectComplete(true);
-      }, 200);
+      }, 50);
 
       setTimeout(() => {
         setShowBorder(true);
-      }, 1700);
+      }, 1900);
     }
   };
 
@@ -226,7 +226,7 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
                     in={aboutComplete}
                     nodeRef={refs4.current[i]}
                     classNames="connect"
-                    timeout={500}
+                    timeout={100}
                     onEntered={handleConnectEntered}
                   >
                     <li
