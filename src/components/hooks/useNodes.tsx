@@ -292,6 +292,33 @@ export const useTechNodes = () => {
     ),
     []
   );
+  const tech24 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/fly.io-20232A?style=for-the-badge&logo=fly.io"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech25 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/docker-20232A?style=for-the-badge&logo=docker"
+        alt=""
+      />
+    ),
+    []
+  );
+  const tech26 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/openai-20232A?style=for-the-badge&logo=openai"
+        alt=""
+      />
+    ),
+    []
+  );
 
   return useMemo(
     () => [
@@ -318,6 +345,9 @@ export const useTechNodes = () => {
       tech17, // mysql
       tech11, // adaptable
       tech12, // netlify
+      tech24, // fly.io
+      tech25, // docker
+      tech26, // openai
     ],
     [
       tech1,
@@ -343,6 +373,9 @@ export const useTechNodes = () => {
       tech21,
       tech22,
       tech23,
+      tech24,
+      tech25,
+      tech26,
     ]
   );
 };
