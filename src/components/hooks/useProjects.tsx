@@ -8,6 +8,7 @@ import novavistacafe from "../../assets/projectImages/novavistacafe.png";
 import novavistadashboard from "../../assets/projectImages/novavistadashboard.png";
 import novavistafrom from "../../assets/projectImages/novavistaform.png";
 import pawnarena from "../../assets/projectImages/pawnarena.png";
+import eloqra from "../../assets/projectImages/eloqra.png";
 
 export const useProjects = () => {
   const projects = [
@@ -91,6 +92,28 @@ export const useProjects = () => {
 export const useMainProjects = () => {
   const projects = [
     {
+      link: "https://eloqra.com/",
+      githublink: "https://github.com/sevleo/Voice-to-Text",
+      imgSrc: eloqra,
+      projectName: "Eloqra",
+      projectDescription:
+        "A voice note-taking app. The user provides an audio through recording their voice, uploading an audio file, or entering link to a youtube video. Then the audio is transcribed into text and refined by an AI to meet the desired format. Works on desktop and mobile, an iOS version is coming soon as well.",
+      technologies: [
+        "Vue",
+        "NodeJS",
+        "Docker",
+        "TailwindCSS",
+        "TypeScript",
+        "Python",
+        "WebSockets",
+        "Fly.io",
+        "Whisper API",
+        "OpenAI API",
+        "MongoDB",
+        "AWS S3",
+      ],
+    },
+    {
       link: "https://pawn-arena.netlify.app/",
       githublink: "https://github.com/sevleo/Pawn-Arena",
       imgSrc: pawnarena,
@@ -123,16 +146,6 @@ export const useMainProjects = () => {
       projectDescription:
         "A minimalist shopping cart implementation with ReactJS. Fetching products data from MockShop API and storing it locally in the browser. Using React components with states to implement neat and smooth user experience.",
       technologies: ["React", "JavaScript", "TailwindCSS"],
-    },
-
-    {
-      link: "https://sevleo.github.io/TOP-RestaurantMenu/",
-      githublink: "https://github.com/sevleo/TOP-RestaurantMenu",
-      imgSrc: novavistacafe,
-      projectName: "Nova Vista Cafe",
-      projectDescription:
-        "Playing with CSS to implement an interesting paralax effect with the background image. A nice little project for learning some CSS tricks.",
-      technologies: ["JavaScript", "CSS", "HTML"],
     },
     {
       link: "https://sevleo.github.io/TOP-Battleship/",

@@ -1,7 +1,32 @@
 export const useExperiences = () => {
   const experiences = [
     {
-      dates: "FEB 2024 — APR 2024",
+      dates: "JUN 2024 — PRESENT",
+      roleCompany: "Salesforce Developer · Customertimes",
+      jobDescription: [
+        "Working as a developer on Salesforce projects implementing custom logic",
+        "- Writing Visualforce pages and custom Lightning components",
+        "- Creating ApexClasses and ApexTriggers",
+        "- Creating a framework implementing a no-code configuration of outbound and inbound integrations",
+      ],
+    },
+    {
+      dates: "FEB 2024 — JUN 2024",
+      roleCompany: "Full-stack Developer · Eloqra Project",
+      jobDescription: [
+        "Developed Eloqra, a full-stack application for transcribing voice into text and applying AI to refine the output",
+        "- Frontend: Vue & TailwindCSS",
+        "- Backend: Node.js, Express.js, and Mongoose, with MongoDB as the database",
+        "- Deployed on Fly.io",
+        "- Token-based authentication",
+        "- OpenAI's Whisper API for transcription and Completions API to refine text",
+        "- AWS S3 to handle large files",
+        "- Paddle to handle payments",
+        "- Docker to containerize and manage project images for consistent deployment",
+      ],
+    },
+    {
+      dates: "FEB 2024 — JUN 2024",
       roleCompany: "Full-stack Developer · YoGato Project",
       jobDescription: [
         "Developed YoGato, a full-stack application for a local yoga studio, which went live in March 2024",
