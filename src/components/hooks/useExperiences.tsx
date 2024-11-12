@@ -11,7 +11,7 @@ export const useExperiences = () => {
       ],
     },
     {
-      dates: "FEB 2024 — JUN 2024",
+      dates: "OCT 2024 — PRESENT",
       roleCompany: "Full-stack Developer · Eloqra Project",
       jobDescription: [
         "Developed Eloqra, a full-stack application for transcribing voice into text and applying AI to refine the output",
