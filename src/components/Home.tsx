@@ -16,7 +16,7 @@ export default function Home() {
           <h3 className="info-label">Contact Information</h3>
           <p className="info-value">Name: Vsevolod Leonov</p>
           <p className="info-value">Phone: +1 (609) 255-6416</p>
-          <p className="info-value">Email: seva.leonov@hotmail.com</p>
+          <p className="info-value">Email: contact@sleo.dev</p>
         </div>
         <div className="info-group">
           <h3 className="info-label">Registered Address</h3>

@@ -22,7 +22,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Contact
 
-- email: seva.leonov@hotmail.com
+- email: contact@sleo.dev
 - instagram: https://www.instagram.com/seva_leo/
 - linkedIn: https://linkedin.com/in/seva-leo-733b09114
 - telegram: @sevaleo

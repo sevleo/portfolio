@@ -247,12 +247,12 @@ export default function Portfolio({ loadingState }: PortfolioProps) {
               timeout={200}
             >
               <a
-                href="mailto:seva.leonov@hotmail.com"
+                href="mailto:contact@sleo.dev"
                 className="connect text-sm text-whiteDimmed hover:text-green"
                 ref={nodeRefEmail}
                 style={{ transitionDelay: `${1000}ms` }}
               >
-                seva.leonov@hotmail.com
+                contact@sleo.dev
               </a>
             </CSSTransition>
           </div>
