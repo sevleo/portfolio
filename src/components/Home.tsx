@@ -37,6 +37,25 @@ export default function Home() {
           <p className="info-value">Registration Date: December 19, 2024</p>
         </div>
 
+        <div className="info-group">
+          <h3 className="info-label">Social Media Management</h3>
+          <a
+            href="https://publora.com/"
+            rel="dofollow"
+            className="info-value external-link"
+          >
+            Powered by Publora - The Ultimate Social Media Management Platform
+            for Content Creators
+          </a>
+          <p className="info-value">
+            Streamline your social media with this innovative AI-powered
+            scheduler. Supporting Instagram, TikTok, YouTube, Facebook, and more
+            platforms from one clean, distraction-free dashboard. Perfect for
+            creators who value consistency and efficiency - schedule unlimited
+            posts up to 3 months in advance with smart timing recommendations.
+          </p>
+        </div>
+
         <Link to="/portfolio" className="portfolio-link">
           View CV
         </Link>
