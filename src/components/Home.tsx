@@ -44,8 +44,7 @@ export default function Home() {
             rel="dofollow"
             className="info-value external-link"
           >
-            Powered by Publora - The Ultimate Social Media Management Platform
-            for Content Creators
+            Publora - Smart Social Media Management Platform for Content Creators
           </a>
           <p className="info-value">
             Streamline your social media with this innovative AI-powered
