@@ -27,6 +27,7 @@ export default function Experience({
     YoGato: string;
     LeetCode: string;
     Eloqra: string;
+    Publora: string;
     "Fly.io": string;
     Paddle: string;
   }
@@ -44,6 +45,7 @@ export default function Experience({
     YoGato: "https://yogato.netlify.app/",
     LeetCode: "https://leetcode.com/u/sevaleo/",
     Eloqra: "https://eloqra.com/",
+    Publora: "https://publora.com/",
     "Fly.io": "https://fly.io/",
     Paddle: "https://www.paddle.com/",
   };
@@ -102,7 +104,7 @@ export default function Experience({
     >
       <div className="min-w-[150px]">
         <p
-          className={`text-start text-sm text-whiteDimmed opacity-60 min-[500px]:text-end`}
+          className={`whitespace-nowrap text-start text-xs text-whiteDimmed opacity-60 min-[500px]:text-end`}
         >
           {dates}
         </p>

@@ -20,8 +20,7 @@ export const useIntroNodes = () => {
   const three = useMemo(
     () => (
       <p className="mt-4 w-[300px] text-start text-whiteDimmed">
-        I'm a full-stack software developer specializing on building websites
-        with React and NodesJS.
+        Crafting reliable systems with clean code.
       </p>
     ),
     []
@@ -34,9 +33,7 @@ export const useAboutNodes = () => {
   const four = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        With 9 years of IT experience, including 3 years as a software
-        developer, I began my career in 2014 at an international consulting
-        firm, focusing on Salesforce projects.
+        Hey! I'm Sev, a full-stack developer.
       </p>
     ),
     []
@@ -45,10 +42,9 @@ export const useAboutNodes = () => {
   const five = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        Over time, I mastered the intricacies of each project I joined, quickly
-        developing an intuitive grasp of system dynamics, which naturally led me
-        into an Architect role. In this role, I collaborated with other
-        developers and teams to design scalable solutions.
+        I fell in love with programming back in university, tinkering with
+        JavaScript and building small projects for fun. That curiosity turned
+        into a career when I joined a global Salesforce consultancy.
       </p>
     ),
     []
@@ -57,10 +53,9 @@ export const useAboutNodes = () => {
   const six = useMemo(
     () => (
       <p className="pb-2 text-start text-whiteDimmed">
-        My career soon progressed into the business realm, where I transitioned
-        into a Solution Architect. After a few years, I yearned to return to
-        programming. I took a career break to update my knowledge of modern
-        technologies and frameworks.
+        I thrive when I understand the whole system — frontend to backend,
+        database to deployment. Give me a problem and I'll dig until I know
+        exactly what's happening and why.
       </p>
     ),
     []
@@ -69,8 +64,8 @@ export const useAboutNodes = () => {
   const seven = useMemo(
     () => (
       <p className="text-start text-whiteDimmed">
-        Now, I enjoy creating full-stack applications, finding satisfaction in
-        producing high-quality, reliable, and aesthetically pleasing code.
+        These days I build full-stack apps that are fast, reliable, and actually
+        pleasant to use. Clean code makes me happy :)
       </p>
     ),
     []
@@ -320,6 +315,76 @@ export const useTechNodes = () => {
     []
   );
 
+  const tech27 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/AWS%20S3-20232A?style=for-the-badge&logo=amazons3"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech28 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Render-20232A?style=for-the-badge&logo=render"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech29 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Nuxt.js-20232A?style=for-the-badge&logo=nuxtdotjs"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech30 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/NestJS-20232A?style=for-the-badge&logo=nestjs"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech31 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Nx-20232A?style=for-the-badge&logo=nx"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech32 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=nextdotjs"
+        alt=""
+      />
+    ),
+    []
+  );
+
+  const tech33 = useMemo(
+    () => (
+      <img
+        src="https://img.shields.io/badge/BullMQ-20232A?style=for-the-badge"
+        alt=""
+      />
+    ),
+    []
+  );
+
   return useMemo(
     () => [
       tech2, // typescript
@@ -328,24 +393,31 @@ export const useTechNodes = () => {
       tech8, // css
       tech3, // react
       tech19, // vue
+      tech32, // nextjs
+      tech29, // nuxtjs
       tech5, // tailwind
       tech4, // node
       tech18, // express
+      tech30, // nestjs
       tech14, // mongoose
       tech15, // passport
       tech21, // socket.io
       tech22, // websockets
+      tech33, // bullmq
       tech16, // datefns
       tech13, // dndkit
       tech23, // matterjs
       tech20, // jest
+      tech31, // nx
       tech9, // git
       tech10, // npm
       tech6, // mongodb
       tech17, // mysql
+      tech27, // aws s3
       tech11, // adaptable
       tech12, // netlify
       tech24, // fly.io
+      tech28, // render
       tech25, // docker
       tech26, // openai
     ],
@@ -376,6 +448,13 @@ export const useTechNodes = () => {
       tech24,
       tech25,
       tech26,
+      tech27,
+      tech28,
+      tech29,
+      tech30,
+      tech31,
+      tech32,
+      tech33,
     ]
   );
 };
